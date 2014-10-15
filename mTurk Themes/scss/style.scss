@@ -253,6 +253,8 @@ a:visited {
 
 	/* tab-text-color */
 	color: $tab-text-color;
+
+	white-space: nowrap;
 }
 
 @mixin tab-background($active: "") {
