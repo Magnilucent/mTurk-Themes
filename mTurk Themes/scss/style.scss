@@ -11,7 +11,6 @@ $header-link-color: #4D4D4D;
 $tab-background-color-inactive: #e1e0c0; // e1e0c0
 $tab-background-color-active: #a6cdde; // a6cdde
 $tab-text-color: black; // black
-$tab-text-color-active: black; // black
 $tab-border-color-inactive: #c4c493;
 $tab-border-color-active: #5d9fc0;
 
@@ -245,8 +244,7 @@ a:visited {
 
 	height: 32px;
 
-	margin: 0 1px 0 1px;
-	padding: 0 12px 0 12px;
+	margin: 0 2px 0 2px;
 
 	text-align: center;
 	text-decoration: none;
@@ -265,7 +263,8 @@ a:visited {
 	left: 0;
 	top: 0;
 
-	width: 100%;
+	width: 0;
+	padding-left: 100%;
 
 	z-index: -1;
 
@@ -312,24 +311,25 @@ td[width="60%"] {
 	/* Individual tab wrapper */
 	td[rowspan="2"] {
 		/* Your Account tab */
+
+		a::after {
+			margin-left: 12px;
+			margin-right: 12px;
+		}
+
 		a[href^="/mturk/dashboard"] {
 			@include tab-wrapper();
 
+			&::after {
+				content: "Your Account";
+			}
+
 			img {
 				@include tab-background();
-
-				&::after {
-					content: "Your Account";
-				}
 			}
 
 			img[src$="nav_youraccount_active.gif"] {
 				@include tab-background("active");
-
-				&::after {
-					/* tab-text-color-active */
-					color: $tab-text-color-active;
-				}
 			}
 
 		}
@@ -338,21 +338,16 @@ td[width="60%"] {
 		a[href^="/mturk/findhits"] {
 			@include tab-wrapper();
 
+			&::after {
+				content: "HITS";
+			}
+
 			img {
 				@include tab-background();
-
-				&::after {
-					content: "HITS";
-				}
 			}
 
 			img[src$="nav_hits_active_teal.gif"] {
 				@include tab-background("active");
-
-				&::after {
-					/* tab-text-color-active */
-					color: $tab-text-color-active;
-				}
 			}
 		}
 
@@ -360,21 +355,16 @@ td[width="60%"] {
 		a[href^="/mturk/findquals"] {
 			@include tab-wrapper();
 
+			&::after {
+				content: "Qualifications";
+			}
+
 			img {
 				@include tab-background();
-
-				&::after {
-					content: "Qualifications";
-				}
 			}
 
 			img[src$="nav_quals_active.gif"] {
 				@include tab-background("active");
-
-				&::after {
-					/* tab-text-color-active */
-					color: $tab-text-color-active;
-				}
 			}
 		}
 	}

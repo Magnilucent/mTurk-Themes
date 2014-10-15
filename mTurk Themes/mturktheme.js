@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name       mTurkThemes
 // @namespace  http://ericfraze.com
-// @version    0.4
+// @version    1
 // @description  This script inserts custom CSS for mturk.com
 // @match      https://www.mturk.com/*
-// @resource cssfile https://dl.dropboxusercontent.com/u/8371875/mTurk%20Theme/Output/style.css?version=6456789123464332623456789123456789
-// @resource colpickcssfile https://dl.dropboxusercontent.com/u/8371875/mTurk%20Theme/Output/colpick.css?version=17
+// @resource cssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/style.css?version=6456789123464332623456789123456789
+// @resource colpickcssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/colpick.css?version=17
 // @grant           GM_addStyle
 // @grant           GM_getResourceText
 // @grant           GM_setClipboard
