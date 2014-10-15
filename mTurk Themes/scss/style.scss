@@ -1,0 +1,1195 @@
+/* mTurk Theme */
+
+$page-background-color: white; // white
+
+$link-default-color: blue;
+$link-default-hover-color: inherit;
+$link-default-visited-color: purple;
+
+$header-link-color: #4D4D4D;
+
+$tab-background-color-inactive: #e1e0c0; // e1e0c0
+$tab-background-color-active: #a6cdde; // a6cdde
+$tab-text-color: black; // black
+$tab-text-color-active: black; // black
+$tab-border-color-inactive: #c4c493;
+$tab-border-color-active: #5d9fc0;
+
+$page-header-background-color: #a6cdde;  // a6cdde
+$page-header-border-color: #a3a3a3;
+
+$subtab-text-color: #4D4D4D;
+$searchbar-text-color: white;
+
+$page-footer-background-color: #eeeecc; // eeeecc
+
+$table-header-background-color: #7fb4cf; // 7fb4cf
+$table-header-text-color: white; // white
+$table-body-background-color: #f0f6f9; // f0f6f9
+$table-body-border-color: #cccccc;
+$table-link-color: blue; // blue
+$default-text-color: black;
+
+$hit-capsule-title-color: black;
+$hit-capsule-title-hover-color: black;
+$hit-capsule-title-visited-color: black;
+
+$hit-capsule-link-right-color: blue;
+$hit-capsule-link-right-hover-color: inherit;
+$hit-capsule-link-right-visited-color: purple;
+
+$hit-capsule-field-title-color: #336699;
+$hit-capsule-field-text-color: black;
+
+$hit-border-color: #336699;
+
+$hit-header-unqualified-background-color: #cccccc; // cccccc
+$hit-body-unqualified-background-color: #f1f3eb; // f1f3eb
+
+$hit-header-qualified-background-color: #ccdde9; // ccdde9
+$hit-body-qualified-background-color: #f0f6f9; // f0f6f9
+
+$table-list-header-background-color: #cccccc; // cccccc
+$table-list-header-text-color: #336699; // 336699
+$table-list-text-color: black;
+
+$table-list-body-background-color: #95a5a6; // 95a5a6
+$table-list-row-even-background-color: white;
+$table-list-row-odd-background-color: #f1f3eb; // f1f3eb
+$table-list-row-border-color: transparent;
+
+$button-background-color: #ffc436;
+$button-border-color: #000066;
+$button-text-color: #000066; // #000066
+
+$search-go-button-background-color: #e1e0c0;
+$search-go-button-border-color: #c4c493;
+$search-go-button-text-color: black; // black
+
+$sort-button-text-color: white; // white
+
+$separator-text-color: black;
+
+$whatis-link-color: white;
+
+$dashboard-and-workerID-text-color: #CC6600;
+
+$if-you-re-not-text-color: #336699;
+
+$show-earnings-details-text-color: blue;
+
+/***********************************************************
+	Text colors
+	Temporary home for the text color changing selectors.
+*********************************************************/
+body, input, select {
+	/* default-text-color */
+	color: $default-text-color; 
+}
+
+a.capsulelink {
+	/* hit-capsule-title-color */
+	color: $hit-capsule-title-color;
+}
+
+a.capsulelink:hover {
+	/* hit-capsule-title-hover-color */
+	color: $hit-capsule-title-hover-color;
+}
+
+a.capsulelink:visited {
+	/* hit-capsule-title-visited-color */
+	color: $hit-capsule-title-visited-color;
+}
+
+span.capsulelink a {
+	/* hit-capsule-link-right-color */
+	color: $hit-capsule-link-right-color;
+}
+
+span.capsulelink a:hover {
+	/* hit-capsule-link-right-hover-color */
+	color: $hit-capsule-link-right-hover-color;
+}
+
+span.capsulelink a:visited {
+	/* hit-capsule-link-right-visited-color */
+	color: $hit-capsule-link-right-visited-color;
+}
+
+a.header_links:link,
+a.header_links:visited,
+a.header_links:active {
+	/* header-link-color */	
+	color: $header-link-color;
+}
+
+a.nonboldsubnavclass:link,
+a.nonboldsubnavclass:visited,
+a.nonboldsubnavclass:active,
+a.subnavclass:link,
+a.subnavclass:visited,
+a.subnavclass:active {
+	/* subtab-text-color */
+	color: $subtab-text-color;
+}
+
+.almostblack_text {
+	/* separator-text-color */
+	color: $separator-text-color;
+}
+
+#searchbar {
+	/* searchbar-text-color */
+	color: $searchbar-text-color !important;
+}
+
+a.whatis {
+	/* whatis-link-color */
+	color: $whatis-link-color;
+}
+
+.title_orange_text_bold, .orange_text_right {
+	/* dashboard-and-workerID-text-color */
+	color: $dashboard-and-workerID-text-color;
+}
+
+.blue_text {
+	/* if-you-re-not-text-color */
+	color: $if-you-re-not-text-color;
+}
+
+a {
+	/* link-default-color */
+	color: $link-default-color;
+}
+
+a:hover {
+	/* link-default-hover-color */
+	color: $link-default-hover-color;
+}
+
+a:visited {
+	/* link-default-visited-color */
+	color: $link-default-visited-color;
+}
+
+#lnk_show_earnings_details {
+	/* show-earnings-details-text-color */
+	color: $show-earnings-details-text-color;
+}
+
+/******************************************************************************
+	Mixins
+*****************************************************************************/
+
+@mixin button-wrapper() {
+	position: relative;
+	width: 82px;
+	height: 24px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+@mixin button-background($element-type: "input") {
+	@if ($element-type == "input") {
+		width: 0;
+		height: 0;
+		padding: 22px 82px 0 0;
+	} @else {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		box-sizing: border-box;
+	}
+
+	display: inline-block;
+	/* button-background-color */
+	background-color: $button-background-color;
+	/* button-border-color */
+	border: $button-border-color 1px solid;
+
+	border-radius: 6px;
+}
+
+@mixin button-text($content: "None") {
+	content: $content;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	line-height: 23px;
+	font-size: 10px;
+	/* button-text-color */
+	color: $button-text-color;
+
+	pointer-events: none;
+	background: none;
+
+	text-align: center;
+}
+
+@mixin tab-wrapper() {
+	position: relative;
+	display: block;
+
+	width: auto;
+	min-width: 89px;
+
+	height: 32px;
+
+	margin: 0 1px 0 1px;
+	padding: 0 12px 0 12px;
+
+	text-align: center;
+	text-decoration: none;
+	font-weight: 700;
+	line-height: 36px;
+
+	/* tab-text-color */
+	color: $tab-text-color;
+}
+
+@mixin tab-background($active: "") {
+	content: "";
+
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+
+	width: 100%;
+
+	z-index: -1;
+
+	border-radius: 12px 12px 0 0;
+
+	border-width: 1px 1px 0 1px;
+
+	box-sizing: border-box;
+
+	@if ($active=="") {
+		/* tab-background-color-inactive */
+		background-color: $tab-background-color-inactive;
+		/* tab-border-color-inactive */
+		border: $tab-border-color-inactive 1px solid;
+	} @else {
+		/* tab-background-color-active */
+		background-color: $tab-background-color-active;
+		/* tab-border-color-active */
+		border-color: $tab-border-color-active;
+	}
+}
+
+body {
+	/* page-background-color */
+	background-color: $page-background-color;
+	margin: 0;
+}
+
+/* Get rid of the corner images */
+img[src$="corner_blue.gif"] {
+	display: none;
+}
+
+/******************************************************************************
+	This section is changing the tabs at the top of the page to CSS.
+	Amazon doesn't use classes or other forms of identification often so we
+	have to get creative with our selector for the active tab.
+
+	We'll also change up the "[number] HITs Availiable" to fit in better.
+*******************************************************************************/
+
+/* Tab wrapper */
+td[width="60%"] {
+	/* Individual tab wrapper */
+	td[rowspan="2"] {
+		/* Your Account tab */
+		a[href^="/mturk/dashboard"] {
+			@include tab-wrapper();
+
+			img {
+				@include tab-background();
+
+				&::after {
+					content: "Your Account";
+				}
+			}
+
+			img[src$="nav_youraccount_active.gif"] {
+				@include tab-background("active");
+
+				&::after {
+					/* tab-text-color-active */
+					color: $tab-text-color-active;
+				}
+			}
+
+		}
+
+		/* HITs tab */
+		a[href^="/mturk/findhits"] {
+			@include tab-wrapper();
+
+			img {
+				@include tab-background();
+
+				&::after {
+					content: "HITS";
+				}
+			}
+
+			img[src$="nav_hits_active_teal.gif"] {
+				@include tab-background("active");
+
+				&::after {
+					/* tab-text-color-active */
+					color: $tab-text-color-active;
+				}
+			}
+		}
+
+		/* Quals tab */
+		a[href^="/mturk/findquals"] {
+			@include tab-wrapper();
+
+			img {
+				@include tab-background();
+
+				&::after {
+					content: "Qualifications";
+				}
+			}
+
+			img[src$="nav_quals_active.gif"] {
+				@include tab-background("active");
+
+				&::after {
+					/* tab-text-color-active */
+					color: $tab-text-color-active;
+				}
+			}
+		}
+	}
+}
+
+
+/* HITs Available */
+td[width="20%"] span {
+	font-size: 0 !important;
+	line-height: 0;
+	display: block;
+	height: 32px;
+	width: auto !important;
+	padding: 0 12px 0 12px;
+	/* tab-background-color-inactive */
+	background-color: $tab-background-color-inactive;
+
+	border-radius: 12px 12px 0 0;
+
+	/* tab-border-color-inactive */
+	border: $tab-border-color-inactive 1px solid;
+	border-width: 1px 1px 0 1px;
+
+	box-sizing: border-box;
+
+	b {
+		/* tab-text-color */
+		color: $tab-text-color !important;
+		font-size: 11px;
+		line-height: 32px;
+	}
+}
+
+/******************************************************************************
+	This is styling the block with the search bar and other features.
+*******************************************************************************/
+#subtabs_and_searchbar {
+	background-image: none !important;
+	/* page-header-background-color */
+	background-color: $page-header-background-color;
+	/* page-header-border-color */
+	border-top: $page-header-border-color 1px solid !important;
+
+	padding-left: 12px;
+
+	box-sizing: border-box;
+
+	margin-bottom: 15px;
+
+	height: 64px;
+
+	a {
+
+	}
+
+	#searchbar select, input {
+		/* default-text-color */
+		color: $default-text-color;
+	}
+}
+
+/* Gah! I hate static selectors like this but I can't think of anything else! */
+/* Replaces the static input button with a custon one */
+#searchbar_form > div:nth-child(4) {
+	position: relative;
+
+	#search_go_button {
+		display: block;
+		width: 0;
+		height: 0;
+		padding: 0 0 21px 21px !important;
+		/* search-go-button-background-color */
+		background: $search-go-button-background-color !important;
+		border-radius: 21px;
+
+		/* search-go-button-border-color */
+		border: $search-go-button-border-color 1px solid;
+
+		box-sizing: border-box;
+	}
+
+	&::after {
+		content: "GO";
+		/* search-go-button-text-color */
+		color: $search-go-button-text-color;
+		font-size: 8px;
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		line-height: 23px;
+		pointer-events: none;
+		background: none;
+	}
+	
+}
+
+/*****************************************************************************
+	Here we are styling the tables on the front page.
+	Amazon has decided to use tables inside tables inside tables so styling
+	this is tricky.
+*****************************************************************************/
+
+/* Top table with Name and Turker ID */
+table[width="760"] {
+	width: 960px;
+	padding: 5px;
+}
+
+/* Table wrapper */
+table[width="760"][cellspacing="0"] {
+	width: 960px;
+	/* table-body-background-color */
+	background-color: $table-body-background-color;
+	border-spacing: 0;
+
+	/* margin-bottom: 15px; */
+	padding: 0;
+
+	border-radius: 12px 12px 0 0;
+	overflow: hidden;
+
+	/* Remove spacing beside header text */
+	td[bgcolor="#7fb4cf"][width="10"] {
+		display: none;
+	}
+
+	/* Table header */
+	td[bgcolor="#7fb4cf"][width="100%"] {
+		/* table-header-background-color */
+		background-color: $table-header-background-color;
+		padding-left: 15px;
+		/* table-header-text-color */
+		color: $table-header-text-color !important;
+	}
+
+	/* Inner table container */
+	.container-content {
+		/* table-body-background-color */
+		background-color: $table-body-background-color;
+		background-image: none;
+		border: none;
+	
+	/* table-body-border-color */
+		border: $table-body-border-color 1px solid;
+		border-width: 0 1px 1px 1px;
+	}
+
+	/* Generic table */
+	.metrics-table {
+		/*
+		border-spacing: 0;
+		border-collapse: collapse;
+		*/
+
+		td {
+			/*
+			padding: 5px;
+			*/
+			/* table-list-text-color */
+			color: $table-list-text-color;
+		}
+
+		/* 50/50 tables have to have no padding */
+		td[width="50%"] {
+			/*
+			padding: 0;
+			*/
+		}
+
+		/* Divide 50/50 tables */
+		td[width="50%"]:first-child {
+			/*
+			padding-right: 1px;
+			*/
+		}
+
+		/* Divide 50/50 tables */
+		td[width="50%"]:last-child {
+			/*
+			padding-left: 1px;
+			*/
+		}
+
+		tr.metrics-table-header-row {
+			/* table-list-header-background-color */
+			background-color: $table-list-header-background-color;
+			border: none;
+			/* table-list-header-text-color */
+			color: $table-list-header-text-color;
+		}
+
+		tr.even {
+			/* table-list-row-even-background-color */
+			background-color: $table-list-row-even-background-color;
+			/* table-list-row-border-color */
+			border-top: $table-list-row-border-color solid 2px;
+		}
+
+		tr.odd {
+			/* table-list-row-odd-background-color */
+			background-color: $table-list-row-odd-background-color;
+			/* table-list-row-border-color */
+			border-top: $table-list-row-border-color solid 2px;
+		}
+
+		/* Change link color */
+		td a {
+			/* table-link-color */
+			color: $table-link-color;
+		}
+	}
+}
+
+/* All tables after the first need to not have a border-radius */
+table[width="760"][cellspacing="0"] ~ table[width="760"][cellspacing="0"] {
+	border-radius: 0;
+}
+
+/* This is the Table for HitDB. We're going to make it match the theme. */
+table[width="700"][cellspacing="0px"] {
+	width: 960px;
+
+	.white_text_14_bold {
+		/* table-header-background-color */
+		background-color: $table-header-background-color !important;
+		padding-left: 15px !important;
+		/* table-header-text-color */
+		color: $table-header-text-color !important;
+	}
+
+	.container-content {
+		/* table-body-background-color */
+		background-color: $table-body-background-color;
+		background-image: none;
+		border: none;
+		
+		/* table-body-border-color */
+		border: 1px $table-body-border-color solid;
+		border-width: 0 1px 1px 1px;
+	}
+}
+
+
+/*****************************************************************************
+	Here we're styling the HITs page.
+	The borders are shared between qualified and unqualified so we can only
+	select all of them. This means we can't simply change their color and be
+	done with it.
+
+	We are going to have to set the table-style to fixed and then reconstruct
+	the table, making sure the border cells are not displayed.
+*****************************************************************************/
+
+
+/* Sort by tools wrapper */
+#sortresults_form {
+
+	position: relative;
+
+	/* Go button */
+	/* Removing the image and adding effects */
+	input[src$="go-button-gateway.gif"] {
+		display: inline-block;
+		width: 0;
+		height: 0;
+		padding: 20px 20px 0 0;
+
+		background-color: #cc6633; /* Needs variable! */
+		border-radius: 21px;
+
+		border: #f1b158 1px solid !important; /* Needs variable! */
+	}
+
+	/* Adding text to the GO! button */
+	&::after {
+		content: "GO!";
+		position: absolute;
+		display: block;
+		top: 0;
+		right: 3px;
+		line-height: 21px;
+		font-size: 9px;
+
+		/* sort-button-text-color */
+		color: $sort-button-text-color;
+
+		pointer-events: none;
+		background: none;
+
+		box-sizing: border-box;
+	}
+}
+
+/* The wrapper for all HIT tables */
+table[width="100%"][cellspacing="5"] {
+	
+	/* A generic HIT table */
+	table[width="100%"][height="100%"] {
+		/* Make it so we have control over cell widths */
+		table-layout: fixed;
+		overflow: hidden;
+		margin-bottom: 5px;
+
+		/* hit-border-color */
+		border: $hit-border-color 1px solid;
+		border-radius: 12px;
+
+		/* Get rid of the top & bottom borders */
+		td[bgcolor="#336699"][height="1"] {
+			height: 0;
+		}
+
+		/* Get rid of the header spacers */
+		td[colspan="2"][valign="bottom"] {
+			width: 0;
+		}
+
+		/* Get rid of the corner images */
+		img[src$="corner.gif"],
+		img[src$="corner_grey.gif"] {
+			display: none;
+		}
+
+		/* Header title */
+		td[valign="middle"][align="left"] {
+			padding-left: 6px;
+		}
+
+		/* Header view hit link section */
+		td[valign="middle"][align="right"] {
+			padding-right: 8px;
+		}
+
+		/* Unqualified HIT header */
+		td[bgcolor="#CCCCCC"] {
+			/* hit-header-unqualified-background-color */
+			background-color: $hit-header-unqualified-background-color;
+			height: 22px;
+		}
+
+		/* Unqualified HIT body */
+		td[bgcolor="#F1F3EB"] {
+			/* hit-body-unqualified-background-color */
+			background-color: $hit-body-unqualified-background-color;
+			padding: 8px;
+		}
+
+		/* Qualified HIT header */
+		td[bgcolor="#CCDDE9"] {
+			/* hit-header-qualified-background-color */
+			background-color: $hit-header-qualified-background-color;
+			height: 22px;
+		}
+
+		/* Qualified HIT body */
+		td[bgcolor="#FOF6F9"] {
+			/* hit-body-qualified-background-color */
+			background-color: $hit-body-qualified-background-color;
+			padding: 8px;
+		}
+
+
+		a {
+
+		}
+
+		a:visited {
+
+		}
+
+		table[cellspacing="5"] {
+			border-spacing: 0;
+		}
+	}
+}
+
+
+/*****************************************
+	Individual HIT page
+*****************************************/
+
+/* Pileline Header */
+/* Yes, I selected this thing based on its style attribute. */
+table[style="padding-top: 0px; border: 0;"],
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] {
+
+	/* Accept button wrapper */
+	td[height="26"]{
+		/* Accept button */
+		div[name="cookieDependentFunctionality"] {
+			@include button-wrapper();
+
+			input {
+				@include button-background("input");
+			}
+
+			/* Accept button text */
+			&::after {
+				@include button-text("Accept");
+			}
+		}
+
+	}
+
+	/* Second button wrapper */
+	td[height="26"] + td + td[height="26"]{
+		/* Button image wrapper */
+		a[href^="/mturk/"] {
+			@include button-wrapper();
+
+			/* Button */
+			img {
+				@include button-background("img");
+			}
+
+			/* Skip button text */
+			&::after {
+				@include button-text("Skip HIT");
+			}
+		}
+
+		a[href^="/mturk/return"] {
+			/* Return HIT button text */
+			&::after {
+				content: "Return HIT";
+			}
+		}
+	}
+
+	/* Greyed out submit button */
+	a[id^="pipeline.submit.iframes.tooltip"] {
+		@include button-wrapper();
+		opacity: 0.6;
+
+		/* Button */
+		img {
+			@include button-background("img");
+		}
+
+		/* Skip button text */
+		&::after {
+			@include button-text("Submit HIT");
+		}
+	}
+
+	/* Support for my "Return & Accept" script */
+	#returnAccept {
+			@include button-wrapper();
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			/* Button */
+			img {
+				@include button-background("img");
+			}
+
+			/* Skip button text */
+			&::after {
+				@include button-text("R&A HIT");
+			}
+	}
+}
+
+/* HIT information caspule */
+/* This also applies to the box on the qualification pages */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] {
+	width: auto !important;
+	margin: 5px 20px !important;
+
+	/* HIT information caspule */
+	table[style="width: auto; margin-left: 10px; margin-right: 10px;"]{
+		/* Make it so we have control over cell widths */
+		table-layout: fixed;
+		overflow: hidden;
+
+		/* hit-border-color */
+		border: $hit-border-color 1px solid;
+		border-radius: 12px;
+
+		width: 100% !important;
+		margin: 0 !important;
+
+		/* Get rid of the top & bottom borders */
+		td[bgcolor="#336699"][height="1"] {
+			height: 0;
+			background-color: transparent;
+		}
+
+		/* Get rid of the side borders */
+		td[bgcolor="#336699"][width="8"] {
+			width: 0;
+			background-color: transparent;
+		}
+
+
+		/* Get rid of the header spacers */
+		td[colspan="2"] {
+			width: 0;
+		}
+
+		/* Get rid of the corner images */
+		img[src$="corner.gif"],
+		img[src$="corner_grey.gif"] {
+			display: none;
+		}
+
+		/* Header title */
+		td[valign="middle"][align="left"] {
+			margin: 0;
+			padding-left: 6px;
+		}
+
+		/* Qualified HIT header */
+		td[bgcolor="#CCDDE9"] {
+			/* hit-header-qualified-background-color */
+			background-color: $hit-header-qualified-background-color;
+			height: 22px;
+		}
+
+		/* Qualified HIT body */
+		td[bgcolor="#F0F6F9"] {
+			/* hit-body-qualified-background-color */
+			background-color: $hit-body-qualified-background-color;
+			padding: 8px;
+		}
+
+
+		a {
+
+		}
+
+		a:visited {
+
+		}
+
+		table[cellspacing="5"] {
+			border-spacing: 0;
+		}
+	}
+}
+
+/*****************************************
+	Individual qualification page
+******************************************/
+
+td[valign="bottom"][height="26"]{
+	/* Continue button wrapper */
+	form[name="qualificationForm"] {
+		@include button-wrapper();
+		/* Continue button */
+		input[name="submit"] {
+			@include button-background("input");
+		}
+
+		&::after {
+			@include button-text("Continue");
+		}
+	}
+
+	/* Cancel button wrapper */
+	a[href^="/mturk/findquals"] {
+		@include button-wrapper();
+		/* Continue button */
+		img {
+			@include button-background("img");
+		}
+
+		&::after {
+			@include button-text("Cancel");
+		}
+	}
+}
+/*****************************************
+	Footer
+******************************************/
+
+.footer_separator {
+	/* page-footer-background-color */
+	background-color: $page-footer-background-color !important;
+}
+
+
+
+/*****************************************
+	JavaScript plugin UI
+******************************************/
+#mturktheme {
+	box-sizing: border-box;
+	background-color: #f5f5f5;
+	position: fixed;
+	top: 0;
+	right: -270px;
+	height: 100%;
+	width: 270px;
+	font-size: 8pt;
+	transition: right 0.5s ease;
+	overflow-y: scroll;
+	padding: 3px 3px 0;
+	color: black;
+
+	border-left: 2px #dadada solid;
+
+	padding-bottom: 100px;
+
+	&.active {
+		right: 0;
+		transition: right 0.5s ease;
+	}
+
+	.toolbar {
+		box-sizing: border-box;
+		height: 31px;
+		width: 100%;
+		padding: 5px 5px 5px 8px;
+		text-align: center;
+		color: #585858;
+
+		line-height: calc(31px - 10px);
+
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.icon {
+			margin-top: 2px;
+
+			&.add, &.import {
+				float: left;
+				margin-right: 5px;
+			}
+
+			&.export {
+				float: left;
+				margin-right: 5px;
+			}
+
+			&.revert {
+				float: right;
+				margin-right: 5px;
+			}
+
+			&.save {
+				float: right;
+				margin-right: 5px;
+			}
+
+			&.close {
+				float: right;
+			}
+		}
+
+		select {
+			float: left;
+			margin-right: 5px;
+			max-width: 90px;
+		}
+		
+	}
+
+	.variable-group-wrapper {
+		box-sizing: border-box;
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+
+		.variable-group, .variable-color {
+			box-sizing: border-box;
+			width: 100%;
+			height: 37px;
+
+			background-color: #fff;
+
+			position: relative;
+
+			margin: 3px 3px 0;
+
+			border-bottom: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+
+			.color {
+				box-sizing: border-box;
+				width: 25px;
+				height: calc(100% - 6px);
+				border: rgba(234, 234, 234, 1) 1px solid;
+				line-height: 20px;
+				text-align: center;
+				font-weight: bold;
+
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				cursor: pointer;
+
+				margin: 3px;
+			}
+
+			.expand {
+				position: absolute;
+				top: 0;
+				right: 0;
+
+				box-sizing: border-box;
+				width: 25px;
+				height: 100%;
+
+				cursor: pointer;
+
+
+				background-color: rgba(234, 234, 234, 1);
+			}
+
+			.expand::after {
+				content: "^";
+				color: #fff;
+				font-size: 14px;
+				margin-top: 8px;
+				text-align: center;
+				overflow: hidden;
+				width: 100%;
+				display: block;
+
+				-ms-transform: rotateZ(180deg); /* IE 9 */
+    			-webkit-transform: rotateZ(180deg); /* Chrome, Safari, Opera */
+    			transform: rotateZ(180deg);
+
+    			margin-left: -1px;
+
+			}
+
+			.content {
+				width: 100%;
+				height: 100%;
+				padding: 6px 30px;
+			}
+
+		}
+
+		.variable-color {
+			margin-left: 15px;
+			display: none;
+		}
+
+		&.active {
+			.variable-color {
+				display: block;
+			}
+
+			.expand::after {
+				-ms-transform: rotateZ(0deg); /* IE 9 */
+    			-webkit-transform: rotateZ(0deg); /* Chrome, Safari, Opera */
+    			transform: rotateZ(0deg);
+
+    			margin-top: 12px;
+			}
+		}
+	}
+}
+
+#mturkthemeoptions {
+	/* header-link-color */	
+	color: $header-link-color;
+	font-weight: bold;
+
+	cursor: pointer;
+
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+
+// Icons
+.icon {
+	position: relative;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	vertical-align: middle;
+	margin-top: -3px;
+
+	cursor: pointer;
+
+	&.add {
+		background-image: url("https://i.imgur.com/oYUnOEh.png");
+	}
+
+	&.export {
+		background-image: url("https://i.imgur.com/Q6euAOY.png");
+	}
+
+	&.import {
+		background-image: url("https://i.imgur.com/Ccu8BIZ.png");
+	}
+
+	&.revert {
+		background-image: url("https://i.imgur.com/RPFdovU.png");
+	}
+
+	&.save {
+		background-image: url("https://i.imgur.com/WT0IJmS.png");
+	}
+
+	&.close {
+		background-image: url("https://i.imgur.com/VnBQo4H.png");
+	}
+
+	&:hover {
+		background-size: 18px 18px;
+	}
+}
