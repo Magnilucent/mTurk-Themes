@@ -21,6 +21,7 @@ $subtab-text-color: #4D4D4D;
 $searchbar-text-color: white;
 
 $page-footer-background-color: #eeeecc; // eeeecc
+$footer-link-text-color: #006699;
 
 $table-header-background-color: #7fb4cf; // 7fb4cf
 $table-header-text-color: white; // white
@@ -181,6 +182,11 @@ a:hover {
 a:visited {
 	/* link-default-visited-color */
 	color: $link-default-visited-color;
+}
+
+a.footer_links {
+	/* footer-link-text-color */
+	color: $footer-link-text-color;
 }
 
 #lnk_show_earnings_details {

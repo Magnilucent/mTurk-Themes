@@ -4,7 +4,7 @@
 // @version    1.1
 // @description  This script inserts custom CSS for mturk.com
 // @match      https://www.mturk.com/*
-// @resource cssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/style.css?version=7123
+// @resource cssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/style.css?version=71234
 // @resource colpickcssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/colpick.css?version=17
 // @grant           GM_addStyle
 // @grant           GM_getResourceText
@@ -40,7 +40,7 @@ var unsavedTheme = "unsavedTheme";
 var savedVariableVersion;
 
 // The version of the script on last save
-var currentVariableVersion = 2;
+var currentVariableVersion = 3;
 
 // List of all themes installed
 var themeNames;
@@ -390,6 +390,7 @@ function resetVariables() {
         ["hit-header-qualified-background-color", ""],
         ["hit-body-qualified-background-color", ""],
         ["page-footer-background-color", ""],
+        ["footer-link-text-color", ""],
     ];
 
     // Used to dynamically group the list items
@@ -578,9 +579,11 @@ function saveTheme(themeName) {
     GM_setValue('mturk-theme-data-' + themeName, JSON.stringify(variables));
 }
 
-function loadTheme(themeName) {
+function loadTheme(themeName, overrideUnsaved) {
+    if (overrideUnsaved == null)
+        overrideUnsaved = false;
     // Check for an unsaved theme
-    if (getSavedVariables(unsavedTheme) !== -1){
+    if ( ( getSavedVariables(unsavedTheme) !== -1 ) && !overrideUnsaved ) {
         console.log("Loading unsaved theme changes");
         variables = getSavedVariables(unsavedTheme);
     }else{
@@ -608,23 +611,28 @@ function applyTheme(themeName) {
 
     // Get original CSS text
     CSSText = GM_getResourceText("cssfile");
-
-    // Load theme's variables
-    loadTheme(currentTheme);
-
-    // Applies the variables to the CSS
-    VariablesToCSS();
-
     if (savedVariableVersion != currentVariableVersion){
         console.log("New version!");
-        CSSToVariables();
-        if (getSavedVariables(unsavedTheme) !== -1){
-            saveTheme(unsavedTheme);
-        }else{
-            if (getSavedVariables(themeName) !== -1){
-                saveTheme(themeName);
-            }
+
+        if (getSavedVariables(themeName) !== -1){
+            loadTheme(currentTheme, true);
+            VariablesToCSS();
+            CSSToVariables();
+            saveTheme(themeName);
         }
+
+        if (getSavedVariables(unsavedTheme) !== -1){
+            loadTheme(currentTheme);
+            VariablesToCSS();
+            CSSToVariables();
+            saveTheme(unsavedTheme);
+        }
+    }else{
+        // Load theme's variables
+        loadTheme(currentTheme);
+
+        // Applies the variables to the CSS
+        VariablesToCSS();
     }
 
     // Add the CSS to the page
