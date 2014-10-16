@@ -116,6 +116,16 @@ span.capsulelink a:visited {
 	color: $hit-capsule-link-right-visited-color;
 }
 
+.capsule_field_title a {
+	/* hit-capsule-field-title-color */
+	color: $hit-capsule-field-title-color;
+}
+
+.capsule_field_text {
+	/* hit-capsule-field-text-color */
+	color: $hit-capsule-field-text-color;
+}
+
 a.header_links:link,
 a.header_links:visited,
 a.header_links:active {
@@ -639,8 +649,9 @@ table[width="700"][cellspacing="0px"] {
 		width: 0;
 		height: 0;
 		padding: 20px 20px 0 0;
-
+		
 		background-color: #cc6633; /* Needs variable! */
+
 		border-radius: 21px;
 
 		border: #f1b158 1px solid !important; /* Needs variable! */

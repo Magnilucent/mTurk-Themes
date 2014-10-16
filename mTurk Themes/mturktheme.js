@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name       mTurkThemes
 // @namespace  http://ericfraze.com
-// @version    1
+// @version    1.1
 // @description  This script inserts custom CSS for mturk.com
 // @match      https://www.mturk.com/*
-// @resource cssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/style.css?version=6456789123464332623456789123456789
+// @resource cssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/style.css?version=7123
 // @resource colpickcssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/colpick.css?version=17
 // @grant           GM_addStyle
 // @grant           GM_getResourceText
@@ -36,8 +36,18 @@ var currentTheme;
 // TODO: Make sure no one can name a name 'unsavedTheme'.
 var unsavedTheme = "unsavedTheme";
 
+// The version of the script on last save
+var savedVariableVersion;
+
+// The version of the script on last save
+var currentVariableVersion = 2;
+
 // List of all themes installed
 var themeNames;
+
+
+// Get last save script version
+savedVariableVersion = GM_getValue('savedVariableVersion', -1);
 
 // Check to see if there is a current theme. If not, this is probably the first run.
 if (GM_getValue('mturk-current-theme', -1) === -1){
@@ -333,6 +343,8 @@ function resetVariables() {
         ["hit-capsule-link-right-color", ""],
         ["hit-capsule-link-right-hover-color", ""],
         ["hit-capsule-link-right-visited-color", ""],
+        ["hit-capsule-field-title-color", ""],
+        ["hit-capsule-field-text-color", ""],
         ["header-link-color", ""],
         ["subtab-text-color", ""],
         ["separator-text-color", ""],
@@ -441,9 +453,15 @@ function getProperty(variableName) {
     regex = findPropertyRegex(variableName, '');
     // Get the groups
     groups = regex.exec(CSSText);
-
-    // Return the value
-    return groups[2];
+    if (groups != null) {
+        // Return the value
+        return groups[2];
+    }else{
+        console.log("Couldn't find " + variableName);
+        var i = getPropertyIndex(variableName);
+        delete variables[i];
+        return -1;
+    }
 }
 
 // Set an individual property to a color
@@ -554,6 +572,7 @@ function deleteTheme(themeName) {
 }
 
 function saveTheme(themeName) {
+    GM_setValue('savedVariableVersion', currentVariableVersion);
     GM_setValue('mturk-theme-data-' + themeName, JSON.stringify(variables));
 }
 
@@ -563,7 +582,7 @@ function loadTheme(themeName) {
         console.log("Loading unsaved theme changes");
         variables = getSavedVariables(unsavedTheme);
     }else{
-        // Checck for an existing theme
+        // Check for an existing theme
         if (getSavedVariables(themeName) !== -1){
                 console.log("Loading saved theme");
                 variables = getSavedVariables(themeName);
@@ -594,6 +613,18 @@ function applyTheme(themeName) {
     // Applies the variables to the CSS
     VariablesToCSS();
 
+    if (savedVariableVersion != currentVariableVersion){
+        console.log("New version!");
+        CSSToVariables();
+        if (getSavedVariables(unsavedTheme) !== -1){
+            saveTheme(unsavedTheme);
+        }else{
+            if (getSavedVariables(themeName) !== -1){
+                saveTheme(themeName);
+            }
+        }
+    }
+
     // Add the CSS to the page
     if (getStyle().length){
         applyCSS();
@@ -607,17 +638,22 @@ function VariablesToCSS() {
     var variableName;
     var color;
     for (var i in variables) {
-        variableName = variables[i][0];
-        
-        color = variables[i][1];
-        
-        setProperty(variableName, null, color);
-        
-        if (color in colorGroups) {
-            colorGroups[color].push(i);
-        }else{
-            colorGroups[color] = [];
-            colorGroups[color][0] = i;
+        if (variables[i]) {
+            variableName = variables[i][0];
+            
+            color = variables[i][1];
+            if (color == "") {
+                color = getProperty(variableName);
+            }
+
+            setProperty(variableName, null, color);
+            
+            if (color in colorGroups) {
+                colorGroups[color].push(i);
+            }else{
+                colorGroups[color] = [];
+                colorGroups[color][0] = i;
+            }
         }
     }
 }
@@ -631,13 +667,16 @@ function CSSToVariables() {
     for (var i in variables) {
         variableName = variables[i][0];
         color = getProperty(variableName);
-        variables[i][1] = color;
-        
-        if (color in colorGroups) {
-            colorGroups[color].push(i);
-        }else{
-            colorGroups[color] = [];
-            colorGroups[color][0] = i;
+        console.log(variableName + " | " + color);
+        if (color != -1){
+            variables[i][1] = color;
+            
+            if (color in colorGroups) {
+                colorGroups[color].push(i);
+            }else{
+                colorGroups[color] = [];
+                colorGroups[color][0] = i;
+            }
         }
     }
 }

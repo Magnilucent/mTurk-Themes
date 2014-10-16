@@ -45,7 +45,19 @@ span.capsulelink a:visited {
   color: purple;
 }
 
-/* line 121, ../scss/style.scss */
+/* line 119, ../scss/style.scss */
+.capsule_field_title a {
+  /* hit-capsule-field-title-color */
+  color: #336699;
+}
+
+/* line 124, ../scss/style.scss */
+.capsule_field_text {
+  /* hit-capsule-field-text-color */
+  color: black;
+}
+
+/* line 131, ../scss/style.scss */
 a.header_links:link,
 a.header_links:visited,
 a.header_links:active {
@@ -53,7 +65,7 @@ a.header_links:active {
   color: #4d4d4d;
 }
 
-/* line 131, ../scss/style.scss */
+/* line 141, ../scss/style.scss */
 a.nonboldsubnavclass:link,
 a.nonboldsubnavclass:visited,
 a.nonboldsubnavclass:active,
@@ -64,55 +76,55 @@ a.subnavclass:active {
   color: #4d4d4d;
 }
 
-/* line 136, ../scss/style.scss */
+/* line 146, ../scss/style.scss */
 .almostblack_text {
   /* separator-text-color */
   color: black;
 }
 
-/* line 141, ../scss/style.scss */
+/* line 151, ../scss/style.scss */
 #searchbar {
   /* searchbar-text-color */
   color: white !important;
 }
 
-/* line 146, ../scss/style.scss */
+/* line 156, ../scss/style.scss */
 a.whatis {
   /* whatis-link-color */
   color: white;
 }
 
-/* line 151, ../scss/style.scss */
+/* line 161, ../scss/style.scss */
 .title_orange_text_bold, .orange_text_right {
   /* dashboard-and-workerID-text-color */
   color: #cc6600;
 }
 
-/* line 156, ../scss/style.scss */
+/* line 166, ../scss/style.scss */
 .blue_text {
   /* if-you-re-not-text-color */
   color: #336699;
 }
 
-/* line 161, ../scss/style.scss */
+/* line 171, ../scss/style.scss */
 a {
   /* link-default-color */
   color: blue;
 }
 
-/* line 166, ../scss/style.scss */
+/* line 176, ../scss/style.scss */
 a:hover {
   /* link-default-hover-color */
   color: inherit;
 }
 
-/* line 171, ../scss/style.scss */
+/* line 181, ../scss/style.scss */
 a:visited {
   /* link-default-visited-color */
   color: purple;
 }
 
-/* line 176, ../scss/style.scss */
+/* line 186, ../scss/style.scss */
 #lnk_show_earnings_details {
   /* show-earnings-details-text-color */
   color: blue;
@@ -121,7 +133,7 @@ a:visited {
 /******************************************************************************
 	Mixins
 *****************************************************************************/
-/* line 295, ../scss/style.scss */
+/* line 305, ../scss/style.scss */
 body {
   /* page-background-color */
   background-color: white;
@@ -129,7 +141,7 @@ body {
 }
 
 /* Get rid of the corner images */
-/* line 302, ../scss/style.scss */
+/* line 312, ../scss/style.scss */
 img[src$="corner_blue.gif"] {
   display: none;
 }
@@ -142,22 +154,22 @@ img[src$="corner_blue.gif"] {
 	We'll also change up the "[number] HITs Availiable" to fit in better.
 *******************************************************************************/
 /* Tab wrapper */
-/* line 315, ../scss/style.scss */
+/* line 325, ../scss/style.scss */
 td[width="60%"] {
   /* Individual tab wrapper */
 }
-/* line 317, ../scss/style.scss */
+/* line 327, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] {
   /* Your Account tab */
   /* HITs tab */
   /* Quals tab */
 }
-/* line 320, ../scss/style.scss */
+/* line 330, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a::after {
   margin-left: 12px;
   margin-right: 12px;
 }
-/* line 325, ../scss/style.scss */
+/* line 335, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"] {
   position: relative;
   display: block;
@@ -173,11 +185,11 @@ td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"] {
   color: black;
   white-space: nowrap;
 }
-/* line 328, ../scss/style.scss */
+/* line 338, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"]::after {
   content: "Your Account";
 }
-/* line 332, ../scss/style.scss */
+/* line 342, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"] img {
   content: "";
   position: absolute;
@@ -195,7 +207,7 @@ td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"] img {
   /* tab-border-color-inactive */
   border: #c4c493 1px solid;
 }
-/* line 336, ../scss/style.scss */
+/* line 346, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"] img[src$="nav_youraccount_active.gif"] {
   content: "";
   position: absolute;
@@ -213,7 +225,7 @@ td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"] img[src$="nav_yourac
   /* tab-border-color-active */
   border-color: #5d9fc0;
 }
-/* line 343, ../scss/style.scss */
+/* line 353, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"] {
   position: relative;
   display: block;
@@ -229,11 +241,11 @@ td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"] {
   color: black;
   white-space: nowrap;
 }
-/* line 346, ../scss/style.scss */
+/* line 356, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"]::after {
   content: "HITS";
 }
-/* line 350, ../scss/style.scss */
+/* line 360, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"] img {
   content: "";
   position: absolute;
@@ -251,7 +263,7 @@ td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"] img {
   /* tab-border-color-inactive */
   border: #c4c493 1px solid;
 }
-/* line 354, ../scss/style.scss */
+/* line 364, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"] img[src$="nav_hits_active_teal.gif"] {
   content: "";
   position: absolute;
@@ -269,7 +281,7 @@ td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"] img[src$="nav_hits_ac
   /* tab-border-color-active */
   border-color: #5d9fc0;
 }
-/* line 360, ../scss/style.scss */
+/* line 370, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"] {
   position: relative;
   display: block;
@@ -285,11 +297,11 @@ td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"] {
   color: black;
   white-space: nowrap;
 }
-/* line 363, ../scss/style.scss */
+/* line 373, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"]::after {
   content: "Qualifications";
 }
-/* line 367, ../scss/style.scss */
+/* line 377, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"] img {
   content: "";
   position: absolute;
@@ -307,7 +319,7 @@ td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"] img {
   /* tab-border-color-inactive */
   border: #c4c493 1px solid;
 }
-/* line 371, ../scss/style.scss */
+/* line 381, ../scss/style.scss */
 td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"] img[src$="nav_quals_active.gif"] {
   content: "";
   position: absolute;
@@ -327,7 +339,7 @@ td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"] img[src$="nav_quals_
 }
 
 /* HITs Available */
-/* line 380, ../scss/style.scss */
+/* line 390, ../scss/style.scss */
 td[width="20%"] span {
   font-size: 0 !important;
   line-height: 0;
@@ -343,7 +355,7 @@ td[width="20%"] span {
   border-width: 1px 1px 0 1px;
   box-sizing: border-box;
 }
-/* line 398, ../scss/style.scss */
+/* line 408, ../scss/style.scss */
 td[width="20%"] span b {
   /* tab-text-color */
   color: black !important;
@@ -354,7 +366,7 @@ td[width="20%"] span b {
 /******************************************************************************
 	This is styling the block with the search bar and other features.
 *******************************************************************************/
-/* line 409, ../scss/style.scss */
+/* line 419, ../scss/style.scss */
 #subtabs_and_searchbar {
   background-image: none !important;
   /* page-header-background-color */
@@ -366,7 +378,7 @@ td[width="20%"] span b {
   margin-bottom: 15px;
   height: 64px;
 }
-/* line 428, ../scss/style.scss */
+/* line 438, ../scss/style.scss */
 #subtabs_and_searchbar #searchbar select, #subtabs_and_searchbar input {
   /* default-text-color */
   color: black;
@@ -374,11 +386,11 @@ td[width="20%"] span b {
 
 /* Gah! I hate static selectors like this but I can't think of anything else! */
 /* Replaces the static input button with a custon one */
-/* line 436, ../scss/style.scss */
+/* line 446, ../scss/style.scss */
 #searchbar_form > div:nth-child(4) {
   position: relative;
 }
-/* line 439, ../scss/style.scss */
+/* line 449, ../scss/style.scss */
 #searchbar_form > div:nth-child(4) #search_go_button {
   display: block;
   width: 0;
@@ -391,7 +403,7 @@ td[width="20%"] span b {
   border: #c4c493 1px solid;
   box-sizing: border-box;
 }
-/* line 454, ../scss/style.scss */
+/* line 464, ../scss/style.scss */
 #searchbar_form > div:nth-child(4)::after {
   content: "GO";
   /* search-go-button-text-color */
@@ -414,14 +426,14 @@ td[width="20%"] span b {
 	this is tricky.
 *****************************************************************************/
 /* Top table with Name and Turker ID */
-/* line 479, ../scss/style.scss */
+/* line 489, ../scss/style.scss */
 table[width="760"] {
   width: 960px;
   padding: 5px;
 }
 
 /* Table wrapper */
-/* line 485, ../scss/style.scss */
+/* line 495, ../scss/style.scss */
 table[width="760"][cellspacing="0"] {
   width: 960px;
   /* table-body-background-color */
@@ -436,11 +448,11 @@ table[width="760"][cellspacing="0"] {
   /* Inner table container */
   /* Generic table */
 }
-/* line 498, ../scss/style.scss */
+/* line 508, ../scss/style.scss */
 table[width="760"][cellspacing="0"] td[bgcolor="#7fb4cf"][width="10"] {
   display: none;
 }
-/* line 503, ../scss/style.scss */
+/* line 513, ../scss/style.scss */
 table[width="760"][cellspacing="0"] td[bgcolor="#7fb4cf"][width="100%"] {
   /* table-header-background-color */
   background-color: #7fb4cf;
@@ -448,7 +460,7 @@ table[width="760"][cellspacing="0"] td[bgcolor="#7fb4cf"][width="100%"] {
   /* table-header-text-color */
   color: white !important;
 }
-/* line 512, ../scss/style.scss */
+/* line 522, ../scss/style.scss */
 table[width="760"][cellspacing="0"] .container-content {
   /* table-body-background-color */
   background-color: #f0f6f9;
@@ -458,7 +470,7 @@ table[width="760"][cellspacing="0"] .container-content {
   border: #cccccc 1px solid;
   border-width: 0 1px 1px 1px;
 }
-/* line 524, ../scss/style.scss */
+/* line 534, ../scss/style.scss */
 table[width="760"][cellspacing="0"] .metrics-table {
   /*
   border-spacing: 0;
@@ -469,7 +481,7 @@ table[width="760"][cellspacing="0"] .metrics-table {
   /* Divide 50/50 tables */
   /* Change link color */
 }
-/* line 530, ../scss/style.scss */
+/* line 540, ../scss/style.scss */
 table[width="760"][cellspacing="0"] .metrics-table td {
   /*
   padding: 5px;
@@ -477,25 +489,25 @@ table[width="760"][cellspacing="0"] .metrics-table td {
   /* table-list-text-color */
   color: black;
 }
-/* line 539, ../scss/style.scss */
+/* line 549, ../scss/style.scss */
 table[width="760"][cellspacing="0"] .metrics-table td[width="50%"] {
   /*
   padding: 0;
   */
 }
-/* line 546, ../scss/style.scss */
+/* line 556, ../scss/style.scss */
 table[width="760"][cellspacing="0"] .metrics-table td[width="50%"]:first-child {
   /*
   padding-right: 1px;
   */
 }
-/* line 553, ../scss/style.scss */
+/* line 563, ../scss/style.scss */
 table[width="760"][cellspacing="0"] .metrics-table td[width="50%"]:last-child {
   /*
   padding-left: 1px;
   */
 }
-/* line 559, ../scss/style.scss */
+/* line 569, ../scss/style.scss */
 table[width="760"][cellspacing="0"] .metrics-table tr.metrics-table-header-row {
   /* table-list-header-background-color */
   background-color: #cccccc;
@@ -503,38 +515,38 @@ table[width="760"][cellspacing="0"] .metrics-table tr.metrics-table-header-row {
   /* table-list-header-text-color */
   color: #336699;
 }
-/* line 567, ../scss/style.scss */
+/* line 577, ../scss/style.scss */
 table[width="760"][cellspacing="0"] .metrics-table tr.even {
   /* table-list-row-even-background-color */
   background-color: white;
   /* table-list-row-border-color */
   border-top: transparent solid 2px;
 }
-/* line 574, ../scss/style.scss */
+/* line 584, ../scss/style.scss */
 table[width="760"][cellspacing="0"] .metrics-table tr.odd {
   /* table-list-row-odd-background-color */
   background-color: #f1f3eb;
   /* table-list-row-border-color */
   border-top: transparent solid 2px;
 }
-/* line 582, ../scss/style.scss */
+/* line 592, ../scss/style.scss */
 table[width="760"][cellspacing="0"] .metrics-table td a {
   /* table-link-color */
   color: blue;
 }
 
 /* All tables after the first need to not have a border-radius */
-/* line 590, ../scss/style.scss */
+/* line 600, ../scss/style.scss */
 table[width="760"][cellspacing="0"] ~ table[width="760"][cellspacing="0"] {
   border-radius: 0;
 }
 
 /* This is the Table for HitDB. We're going to make it match the theme. */
-/* line 595, ../scss/style.scss */
+/* line 605, ../scss/style.scss */
 table[width="700"][cellspacing="0px"] {
   width: 960px;
 }
-/* line 598, ../scss/style.scss */
+/* line 608, ../scss/style.scss */
 table[width="700"][cellspacing="0px"] .white_text_14_bold {
   /* table-header-background-color */
   background-color: #7fb4cf !important;
@@ -542,7 +554,7 @@ table[width="700"][cellspacing="0px"] .white_text_14_bold {
   /* table-header-text-color */
   color: white !important;
 }
-/* line 606, ../scss/style.scss */
+/* line 616, ../scss/style.scss */
 table[width="700"][cellspacing="0px"] .container-content {
   /* table-body-background-color */
   background-color: #f0f6f9;
@@ -563,14 +575,14 @@ table[width="700"][cellspacing="0px"] .container-content {
 	the table, making sure the border cells are not displayed.
 *****************************************************************************/
 /* Sort by tools wrapper */
-/* line 631, ../scss/style.scss */
+/* line 641, ../scss/style.scss */
 #sortresults_form {
   position: relative;
   /* Go button */
   /* Removing the image and adding effects */
   /* Adding text to the GO! button */
 }
-/* line 637, ../scss/style.scss */
+/* line 647, ../scss/style.scss */
 #sortresults_form input[src$="go-button-gateway.gif"] {
   display: inline-block;
   width: 0;
@@ -582,7 +594,7 @@ table[width="700"][cellspacing="0px"] .container-content {
   border: #f1b158 1px solid !important;
   /* Needs variable! */
 }
-/* line 650, ../scss/style.scss */
+/* line 661, ../scss/style.scss */
 #sortresults_form::after {
   content: "GO!";
   position: absolute;
@@ -599,11 +611,11 @@ table[width="700"][cellspacing="0px"] .container-content {
 }
 
 /* The wrapper for all HIT tables */
-/* line 670, ../scss/style.scss */
+/* line 681, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] {
   /* A generic HIT table */
 }
-/* line 673, ../scss/style.scss */
+/* line 684, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] {
   /* Make it so we have control over cell widths */
   table-layout: fixed;
@@ -622,52 +634,52 @@ table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] {
   /* Qualified HIT header */
   /* Qualified HIT body */
 }
-/* line 684, ../scss/style.scss */
+/* line 695, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[bgcolor="#336699"][height="1"] {
   height: 0;
 }
-/* line 689, ../scss/style.scss */
+/* line 700, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[colspan="2"][valign="bottom"] {
   width: 0;
 }
-/* line 695, ../scss/style.scss */
+/* line 706, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] img[src$="corner.gif"],
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] img[src$="corner_grey.gif"] {
   display: none;
 }
-/* line 700, ../scss/style.scss */
+/* line 711, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[valign="middle"][align="left"] {
   padding-left: 6px;
 }
-/* line 705, ../scss/style.scss */
+/* line 716, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[valign="middle"][align="right"] {
   padding-right: 8px;
 }
-/* line 710, ../scss/style.scss */
+/* line 721, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[bgcolor="#CCCCCC"] {
   /* hit-header-unqualified-background-color */
   background-color: #cccccc;
   height: 22px;
 }
-/* line 717, ../scss/style.scss */
+/* line 728, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[bgcolor="#F1F3EB"] {
   /* hit-body-unqualified-background-color */
   background-color: #f1f3eb;
   padding: 8px;
 }
-/* line 724, ../scss/style.scss */
+/* line 735, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[bgcolor="#CCDDE9"] {
   /* hit-header-qualified-background-color */
   background-color: #ccdde9;
   height: 22px;
 }
-/* line 731, ../scss/style.scss */
+/* line 742, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[bgcolor="#FOF6F9"] {
   /* hit-body-qualified-background-color */
   background-color: #f0f6f9;
   padding: 8px;
 }
-/* line 746, ../scss/style.scss */
+/* line 757, ../scss/style.scss */
 table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] table[cellspacing="5"] {
   border-spacing: 0;
 }
@@ -677,7 +689,7 @@ table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] table[ce
 *****************************************/
 /* Pileline Header */
 /* Yes, I selected this thing based on its style attribute. */
-/* line 760, ../scss/style.scss */
+/* line 771, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"],
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] {
   /* Accept button wrapper */
@@ -685,12 +697,12 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] {
   /* Greyed out submit button */
   /* Support for my "Return & Accept" script */
 }
-/* line 763, ../scss/style.scss */
+/* line 774, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] td[height="26"],
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] {
   /* Accept button */
 }
-/* line 765, ../scss/style.scss */
+/* line 776, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] td[height="26"] div[name="cookieDependentFunctionality"],
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] div[name="cookieDependentFunctionality"] {
   position: relative;
@@ -701,7 +713,7 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[he
   text-decoration: none;
   /* Accept button text */
 }
-/* line 768, ../scss/style.scss */
+/* line 779, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] td[height="26"] div[name="cookieDependentFunctionality"] input,
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] div[name="cookieDependentFunctionality"] input {
   width: 0;
@@ -715,7 +727,7 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[he
   border: #000066 1px solid;
   border-radius: 6px;
 }
-/* line 773, ../scss/style.scss */
+/* line 784, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] td[height="26"] div[name="cookieDependentFunctionality"]::after,
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] div[name="cookieDependentFunctionality"]::after {
   content: "Accept";
@@ -733,12 +745,12 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[he
   background: none;
   text-align: center;
 }
-/* line 781, ../scss/style.scss */
+/* line 792, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"],
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] {
   /* Button image wrapper */
 }
-/* line 783, ../scss/style.scss */
+/* line 794, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"],
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"] {
   position: relative;
@@ -750,7 +762,7 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[he
   /* Button */
   /* Skip button text */
 }
-/* line 787, ../scss/style.scss */
+/* line 798, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"] img,
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"] img {
   content: "";
@@ -769,7 +781,7 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[he
   border: #000066 1px solid;
   border-radius: 6px;
 }
-/* line 792, ../scss/style.scss */
+/* line 803, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"]::after,
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"]::after {
   content: "Skip HIT";
@@ -787,17 +799,17 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[he
   background: none;
   text-align: center;
 }
-/* line 797, ../scss/style.scss */
+/* line 808, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/return"],
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/return"] {
   /* Return HIT button text */
 }
-/* line 799, ../scss/style.scss */
+/* line 810, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/return"]::after,
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/return"]::after {
   content: "Return HIT";
 }
-/* line 806, ../scss/style.scss */
+/* line 817, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] a[id^="pipeline.submit.iframes.tooltip"],
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] a[id^="pipeline.submit.iframes.tooltip"] {
   position: relative;
@@ -810,7 +822,7 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] a[id^
   /* Button */
   /* Skip button text */
 }
-/* line 811, ../scss/style.scss */
+/* line 822, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] a[id^="pipeline.submit.iframes.tooltip"] img,
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] a[id^="pipeline.submit.iframes.tooltip"] img {
   content: "";
@@ -829,7 +841,7 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] a[id^
   border: #000066 1px solid;
   border-radius: 6px;
 }
-/* line 816, ../scss/style.scss */
+/* line 827, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] a[id^="pipeline.submit.iframes.tooltip"]::after,
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] a[id^="pipeline.submit.iframes.tooltip"]::after {
   content: "Submit HIT";
@@ -847,7 +859,7 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] a[id^
   background: none;
   text-align: center;
 }
-/* line 822, ../scss/style.scss */
+/* line 833, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] #returnAccept,
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] #returnAccept {
   position: relative;
@@ -862,7 +874,7 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] #retu
   /* Button */
   /* Skip button text */
 }
-/* line 828, ../scss/style.scss */
+/* line 839, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] #returnAccept img,
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] #returnAccept img {
   content: "";
@@ -881,7 +893,7 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] #retu
   border: #000066 1px solid;
   border-radius: 6px;
 }
-/* line 833, ../scss/style.scss */
+/* line 844, ../scss/style.scss */
 table[style="padding-top: 0px; border: 0;"] #returnAccept::after,
 div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] #returnAccept::after {
   content: "R&A HIT";
@@ -902,13 +914,13 @@ div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] #retu
 
 /* HIT information caspule */
 /* This also applies to the box on the qualification pages */
-/* line 841, ../scss/style.scss */
+/* line 852, ../scss/style.scss */
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] {
   width: auto !important;
   margin: 5px 20px !important;
   /* HIT information caspule */
 }
-/* line 846, ../scss/style.scss */
+/* line 857, ../scss/style.scss */
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] {
   /* Make it so we have control over cell widths */
   table-layout: fixed;
@@ -926,43 +938,43 @@ div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-botto
   /* Qualified HIT header */
   /* Qualified HIT body */
 }
-/* line 859, ../scss/style.scss */
+/* line 870, ../scss/style.scss */
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[bgcolor="#336699"][height="1"] {
   height: 0;
   background-color: transparent;
 }
-/* line 865, ../scss/style.scss */
+/* line 876, ../scss/style.scss */
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[bgcolor="#336699"][width="8"] {
   width: 0;
   background-color: transparent;
 }
-/* line 872, ../scss/style.scss */
+/* line 883, ../scss/style.scss */
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[colspan="2"] {
   width: 0;
 }
-/* line 878, ../scss/style.scss */
+/* line 889, ../scss/style.scss */
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] img[src$="corner.gif"],
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] img[src$="corner_grey.gif"] {
   display: none;
 }
-/* line 883, ../scss/style.scss */
+/* line 894, ../scss/style.scss */
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[valign="middle"][align="left"] {
   margin: 0;
   padding-left: 6px;
 }
-/* line 889, ../scss/style.scss */
+/* line 900, ../scss/style.scss */
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[bgcolor="#CCDDE9"] {
   /* hit-header-qualified-background-color */
   background-color: #ccdde9;
   height: 22px;
 }
-/* line 896, ../scss/style.scss */
+/* line 907, ../scss/style.scss */
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[bgcolor="#F0F6F9"] {
   /* hit-body-qualified-background-color */
   background-color: #f0f6f9;
   padding: 8px;
 }
-/* line 911, ../scss/style.scss */
+/* line 922, ../scss/style.scss */
 div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] table[cellspacing="5"] {
   border-spacing: 0;
 }
@@ -970,12 +982,12 @@ div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-botto
 /*****************************************
 	Individual qualification page
 ******************************************/
-/* line 921, ../scss/style.scss */
+/* line 932, ../scss/style.scss */
 td[valign="bottom"][height="26"] {
   /* Continue button wrapper */
   /* Cancel button wrapper */
 }
-/* line 923, ../scss/style.scss */
+/* line 934, ../scss/style.scss */
 td[valign="bottom"][height="26"] form[name="qualificationForm"] {
   position: relative;
   width: 82px;
@@ -985,7 +997,7 @@ td[valign="bottom"][height="26"] form[name="qualificationForm"] {
   text-decoration: none;
   /* Continue button */
 }
-/* line 926, ../scss/style.scss */
+/* line 937, ../scss/style.scss */
 td[valign="bottom"][height="26"] form[name="qualificationForm"] input[name="submit"] {
   width: 0;
   height: 24px;
@@ -998,7 +1010,7 @@ td[valign="bottom"][height="26"] form[name="qualificationForm"] input[name="subm
   border: #000066 1px solid;
   border-radius: 6px;
 }
-/* line 930, ../scss/style.scss */
+/* line 941, ../scss/style.scss */
 td[valign="bottom"][height="26"] form[name="qualificationForm"]::after {
   content: "Continue";
   display: inline-block;
@@ -1015,7 +1027,7 @@ td[valign="bottom"][height="26"] form[name="qualificationForm"]::after {
   background: none;
   text-align: center;
 }
-/* line 936, ../scss/style.scss */
+/* line 947, ../scss/style.scss */
 td[valign="bottom"][height="26"] a[href^="/mturk/findquals"] {
   position: relative;
   width: 82px;
@@ -1025,7 +1037,7 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"] {
   text-decoration: none;
   /* Continue button */
 }
-/* line 939, ../scss/style.scss */
+/* line 950, ../scss/style.scss */
 td[valign="bottom"][height="26"] a[href^="/mturk/findquals"] img {
   content: "";
   position: absolute;
@@ -1043,7 +1055,7 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"] img {
   border: #000066 1px solid;
   border-radius: 6px;
 }
-/* line 943, ../scss/style.scss */
+/* line 954, ../scss/style.scss */
 td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
   content: "Cancel";
   display: inline-block;
@@ -1064,7 +1076,7 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
 /*****************************************
 	Footer
 ******************************************/
-/* line 952, ../scss/style.scss */
+/* line 963, ../scss/style.scss */
 .footer_separator {
   /* page-footer-background-color */
   background-color: #eeeecc !important;
@@ -1073,7 +1085,7 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
 /*****************************************
 	JavaScript plugin UI
 ******************************************/
-/* line 962, ../scss/style.scss */
+/* line 973, ../scss/style.scss */
 #mturktheme {
   box-sizing: border-box;
   background-color: #f5f5f5;
@@ -1090,12 +1102,12 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
   border-left: 2px #dadada solid;
   padding-bottom: 100px;
 }
-/* line 980, ../scss/style.scss */
+/* line 991, ../scss/style.scss */
 #mturktheme.active {
   right: 0;
   transition: right 0.5s ease;
 }
-/* line 985, ../scss/style.scss */
+/* line 996, ../scss/style.scss */
 #mturktheme .toolbar {
   box-sizing: border-box;
   height: 31px;
@@ -1105,54 +1117,54 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
   color: #585858;
   line-height: calc(31px - 10px);
 }
-/* line 995, ../scss/style.scss */
+/* line 1006, ../scss/style.scss */
 #mturktheme .toolbar:after {
   content: "";
   display: block;
   clear: both;
 }
-/* line 1001, ../scss/style.scss */
+/* line 1012, ../scss/style.scss */
 #mturktheme .toolbar .icon {
   margin-top: 2px;
 }
-/* line 1004, ../scss/style.scss */
+/* line 1015, ../scss/style.scss */
 #mturktheme .toolbar .icon.add, #mturktheme .toolbar .icon.import {
   float: left;
   margin-right: 5px;
 }
-/* line 1009, ../scss/style.scss */
+/* line 1020, ../scss/style.scss */
 #mturktheme .toolbar .icon.export {
   float: left;
   margin-right: 5px;
 }
-/* line 1014, ../scss/style.scss */
+/* line 1025, ../scss/style.scss */
 #mturktheme .toolbar .icon.revert {
   float: right;
   margin-right: 5px;
 }
-/* line 1019, ../scss/style.scss */
+/* line 1030, ../scss/style.scss */
 #mturktheme .toolbar .icon.save {
   float: right;
   margin-right: 5px;
 }
-/* line 1024, ../scss/style.scss */
+/* line 1035, ../scss/style.scss */
 #mturktheme .toolbar .icon.close {
   float: right;
 }
-/* line 1029, ../scss/style.scss */
+/* line 1040, ../scss/style.scss */
 #mturktheme .toolbar select {
   float: left;
   margin-right: 5px;
   max-width: 90px;
 }
-/* line 1037, ../scss/style.scss */
+/* line 1048, ../scss/style.scss */
 #mturktheme .variable-group-wrapper {
   box-sizing: border-box;
   width: 100%;
   height: auto;
   overflow: hidden;
 }
-/* line 1043, ../scss/style.scss */
+/* line 1054, ../scss/style.scss */
 #mturktheme .variable-group-wrapper .variable-group, #mturktheme .variable-group-wrapper .variable-color {
   box-sizing: border-box;
   width: 100%;
@@ -1163,7 +1175,7 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
   border-bottom: 1px solid #ddd;
   border-left: 1px solid #ddd;
 }
-/* line 1057, ../scss/style.scss */
+/* line 1068, ../scss/style.scss */
 #mturktheme .variable-group-wrapper .variable-group .color, #mturktheme .variable-group-wrapper .variable-color .color {
   box-sizing: border-box;
   width: 25px;
@@ -1178,7 +1190,7 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
   cursor: pointer;
   margin: 3px;
 }
-/* line 1075, ../scss/style.scss */
+/* line 1086, ../scss/style.scss */
 #mturktheme .variable-group-wrapper .variable-group .expand, #mturktheme .variable-group-wrapper .variable-color .expand {
   position: absolute;
   top: 0;
@@ -1189,7 +1201,7 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
   cursor: pointer;
   background-color: #eaeaea;
 }
-/* line 1090, ../scss/style.scss */
+/* line 1101, ../scss/style.scss */
 #mturktheme .variable-group-wrapper .variable-group .expand::after, #mturktheme .variable-group-wrapper .variable-color .expand::after {
   content: "^";
   color: #fff;
@@ -1206,22 +1218,22 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
   transform: rotateZ(180deg);
   margin-left: -1px;
 }
-/* line 1108, ../scss/style.scss */
+/* line 1119, ../scss/style.scss */
 #mturktheme .variable-group-wrapper .variable-group .content, #mturktheme .variable-group-wrapper .variable-color .content {
   width: 100%;
   height: 100%;
   padding: 6px 30px;
 }
-/* line 1116, ../scss/style.scss */
+/* line 1127, ../scss/style.scss */
 #mturktheme .variable-group-wrapper .variable-color {
   margin-left: 15px;
   display: none;
 }
-/* line 1122, ../scss/style.scss */
+/* line 1133, ../scss/style.scss */
 #mturktheme .variable-group-wrapper.active .variable-color {
   display: block;
 }
-/* line 1126, ../scss/style.scss */
+/* line 1137, ../scss/style.scss */
 #mturktheme .variable-group-wrapper.active .expand::after {
   -ms-transform: rotateZ(0deg);
   /* IE 9 */
@@ -1231,19 +1243,19 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
   margin-top: 12px;
 }
 
-/* line 1137, ../scss/style.scss */
+/* line 1148, ../scss/style.scss */
 #mturkthemeoptions {
   /* header-link-color */
   color: #4d4d4d;
   font-weight: bold;
   cursor: pointer;
 }
-/* line 1144, ../scss/style.scss */
+/* line 1155, ../scss/style.scss */
 #mturkthemeoptions:hover {
   text-decoration: underline;
 }
 
-/* line 1151, ../scss/style.scss */
+/* line 1162, ../scss/style.scss */
 .icon {
   position: relative;
   width: 18px;
@@ -1255,31 +1267,31 @@ td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
   margin-top: -3px;
   cursor: pointer;
 }
-/* line 1163, ../scss/style.scss */
+/* line 1174, ../scss/style.scss */
 .icon.add {
   background-image: url("https://i.imgur.com/oYUnOEh.png");
 }
-/* line 1167, ../scss/style.scss */
+/* line 1178, ../scss/style.scss */
 .icon.export {
   background-image: url("https://i.imgur.com/Q6euAOY.png");
 }
-/* line 1171, ../scss/style.scss */
+/* line 1182, ../scss/style.scss */
 .icon.import {
   background-image: url("https://i.imgur.com/Ccu8BIZ.png");
 }
-/* line 1175, ../scss/style.scss */
+/* line 1186, ../scss/style.scss */
 .icon.revert {
   background-image: url("https://i.imgur.com/RPFdovU.png");
 }
-/* line 1179, ../scss/style.scss */
+/* line 1190, ../scss/style.scss */
 .icon.save {
   background-image: url("https://i.imgur.com/WT0IJmS.png");
 }
-/* line 1183, ../scss/style.scss */
+/* line 1194, ../scss/style.scss */
 .icon.close {
   background-image: url("https://i.imgur.com/VnBQo4H.png");
 }
-/* line 1187, ../scss/style.scss */
+/* line 1198, ../scss/style.scss */
 .icon:hover {
   background-size: 18px 18px;
 }
