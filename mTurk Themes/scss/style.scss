@@ -20,8 +20,12 @@ $page-header-border-color: #a3a3a3;
 $subtab-text-color: #4D4D4D;
 $searchbar-text-color: white;
 
+$details-link-text-color: #006699;
+
 $page-footer-background-color: #eeeecc; // eeeecc
-$footer-link-text-color: #006699;
+
+$footer-text-color: black;
+$footer-link-text-color: #1170A0;
 
 $table-header-background-color: #7fb4cf; // 7fb4cf
 $table-header-text-color: white; // white
@@ -117,7 +121,7 @@ span.capsulelink a:visited {
 	color: $hit-capsule-link-right-visited-color;
 }
 
-.capsule_field_title a {
+.capsule_field_title {
 	/* hit-capsule-field-title-color */
 	color: $hit-capsule-field-title-color;
 }
@@ -159,7 +163,7 @@ a.whatis {
 	color: $whatis-link-color;
 }
 
-.title_orange_text_bold, .orange_text_right {
+.title_orange_text_bold, .orange_text_right, .title_orange_text {
 	/* dashboard-and-workerID-text-color */
 	color: $dashboard-and-workerID-text-color;
 }
@@ -184,9 +188,20 @@ a:visited {
 	color: $link-default-visited-color;
 }
 
+// Why the hell is this called footer_links when it is not used for that?
 a.footer_links {
+	/* details-link-text-color */
+	color: $details-link-text-color !important;
+}
+
+.footer table a {
 	/* footer-link-text-color */
-	color: $footer-link-text-color;
+	color: $footer-link-text-color !important;
+}
+
+.footer_text {
+	/* footer-text-color */
+	color: $footer-text-color !important;
 }
 
 #lnk_show_earnings_details {

@@ -4,7 +4,7 @@
 // @version    1.1
 // @description  This script inserts custom CSS for mturk.com
 // @match      https://www.mturk.com/*
-// @resource cssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/style.css?version=71234
+// @resource cssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/style.css?version=71234123
 // @resource colpickcssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/colpick.css?version=17
 // @grant           GM_addStyle
 // @grant           GM_getResourceText
@@ -40,7 +40,7 @@ var unsavedTheme = "unsavedTheme";
 var savedVariableVersion;
 
 // The version of the script on last save
-var currentVariableVersion = 3;
+var currentVariableVersion = 5;
 
 // List of all themes installed
 var themeNames;
@@ -390,7 +390,9 @@ function resetVariables() {
         ["hit-header-qualified-background-color", ""],
         ["hit-body-qualified-background-color", ""],
         ["page-footer-background-color", ""],
+        ["footer-text-color", ""],
         ["footer-link-text-color", ""],
+        ["details-link-text-color", ""],
     ];
 
     // Used to dynamically group the list items
