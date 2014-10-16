@@ -1,0 +1,1315 @@
+/* mTurk Theme */
+/***********************************************************
+	Text colors
+	Temporary home for the text color changing selectors.
+*********************************************************/
+/* line 88, ../scss/style.scss */
+body, input, select {
+  /* default-text-color */
+  color: black;
+}
+
+/* line 93, ../scss/style.scss */
+a.capsulelink {
+  /* hit-capsule-title-color */
+  color: black;
+}
+
+/* line 98, ../scss/style.scss */
+a.capsulelink:hover {
+  /* hit-capsule-title-hover-color */
+  color: black;
+}
+
+/* line 103, ../scss/style.scss */
+a.capsulelink:visited {
+  /* hit-capsule-title-visited-color */
+  color: black;
+}
+
+/* line 108, ../scss/style.scss */
+span.capsulelink a {
+  /* hit-capsule-link-right-color */
+  color: blue;
+}
+
+/* line 113, ../scss/style.scss */
+span.capsulelink a:hover {
+  /* hit-capsule-link-right-hover-color */
+  color: inherit;
+}
+
+/* line 118, ../scss/style.scss */
+span.capsulelink a:visited {
+  /* hit-capsule-link-right-visited-color */
+  color: purple;
+}
+
+/* line 123, ../scss/style.scss */
+.capsule_field_title {
+  /* hit-capsule-field-title-color */
+  color: #336699;
+}
+
+/* line 128, ../scss/style.scss */
+.capsule_field_text {
+  /* hit-capsule-field-text-color */
+  color: black;
+}
+
+/* line 135, ../scss/style.scss */
+a.header_links:link,
+a.header_links:visited,
+a.header_links:active {
+  /* header-link-color */
+  color: #4d4d4d;
+}
+
+/* line 145, ../scss/style.scss */
+a.nonboldsubnavclass:link,
+a.nonboldsubnavclass:visited,
+a.nonboldsubnavclass:active,
+a.subnavclass:link,
+a.subnavclass:visited,
+a.subnavclass:active {
+  /* subtab-text-color */
+  color: #4d4d4d;
+}
+
+/* line 150, ../scss/style.scss */
+.almostblack_text {
+  /* separator-text-color */
+  color: black;
+}
+
+/* line 155, ../scss/style.scss */
+#searchbar {
+  /* searchbar-text-color */
+  color: white !important;
+}
+
+/* line 160, ../scss/style.scss */
+a.whatis {
+  /* whatis-link-color */
+  color: white;
+}
+
+/* line 165, ../scss/style.scss */
+.title_orange_text_bold, .orange_text_right, .title_orange_text {
+  /* dashboard-and-workerID-text-color */
+  color: #cc6600;
+}
+
+/* line 170, ../scss/style.scss */
+.blue_text {
+  /* if-you-re-not-text-color */
+  color: #336699;
+}
+
+/* line 175, ../scss/style.scss */
+a {
+  /* link-default-color */
+  color: blue;
+}
+
+/* line 180, ../scss/style.scss */
+a:hover {
+  /* link-default-hover-color */
+  color: inherit;
+}
+
+/* line 185, ../scss/style.scss */
+a:visited {
+  /* link-default-visited-color */
+  color: purple;
+}
+
+/* line 191, ../scss/style.scss */
+a.footer_links {
+  /* details-link-text-color */
+  color: #006699 !important;
+}
+
+/* line 196, ../scss/style.scss */
+.footer table a {
+  /* footer-link-text-color */
+  color: #1170a0 !important;
+}
+
+/* line 201, ../scss/style.scss */
+.footer_text {
+  /* footer-text-color */
+  color: black !important;
+}
+
+/* line 206, ../scss/style.scss */
+#lnk_show_earnings_details {
+  /* show-earnings-details-text-color */
+  color: blue;
+}
+
+/******************************************************************************
+	Mixins
+*****************************************************************************/
+/* line 325, ../scss/style.scss */
+body {
+  /* page-background-color */
+  background-color: white;
+  margin: 0;
+}
+
+/* Get rid of the corner images */
+/* line 332, ../scss/style.scss */
+img[src$="corner_blue.gif"] {
+  display: none;
+}
+
+/******************************************************************************
+	This section is changing the tabs at the top of the page to CSS.
+	Amazon doesn't use classes or other forms of identification often so we
+	have to get creative with our selector for the active tab.
+
+	We'll also change up the "[number] HITs Availiable" to fit in better.
+*******************************************************************************/
+/* Tab wrapper */
+/* line 345, ../scss/style.scss */
+td[width="60%"] {
+  /* Individual tab wrapper */
+}
+/* line 347, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] {
+  /* Your Account tab */
+  /* HITs tab */
+  /* Quals tab */
+}
+/* line 350, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a::after {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+/* line 355, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"] {
+  position: relative;
+  display: block;
+  width: auto;
+  min-width: 89px;
+  height: 32px;
+  margin: 0 2px 0 2px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 36px;
+  /* tab-text-color */
+  color: black;
+  white-space: nowrap;
+}
+/* line 358, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"]::after {
+  content: "Your Account";
+}
+/* line 362, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"] img {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 0;
+  padding-left: 100%;
+  z-index: -1;
+  border-radius: 12px 12px 0 0;
+  border-width: 1px 1px 0 1px;
+  box-sizing: border-box;
+  /* tab-background-color-inactive */
+  background-color: #e1e0c0;
+  /* tab-border-color-inactive */
+  border: #c4c493 1px solid;
+}
+/* line 366, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/dashboard"] img[src$="nav_youraccount_active.gif"] {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 0;
+  padding-left: 100%;
+  z-index: -1;
+  border-radius: 12px 12px 0 0;
+  border-width: 1px 1px 0 1px;
+  box-sizing: border-box;
+  /* tab-background-color-active */
+  background-color: #a6cdde;
+  /* tab-border-color-active */
+  border-color: #5d9fc0;
+}
+/* line 373, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"] {
+  position: relative;
+  display: block;
+  width: auto;
+  min-width: 89px;
+  height: 32px;
+  margin: 0 2px 0 2px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 36px;
+  /* tab-text-color */
+  color: black;
+  white-space: nowrap;
+}
+/* line 376, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"]::after {
+  content: "HITS";
+}
+/* line 380, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"] img {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 0;
+  padding-left: 100%;
+  z-index: -1;
+  border-radius: 12px 12px 0 0;
+  border-width: 1px 1px 0 1px;
+  box-sizing: border-box;
+  /* tab-background-color-inactive */
+  background-color: #e1e0c0;
+  /* tab-border-color-inactive */
+  border: #c4c493 1px solid;
+}
+/* line 384, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/findhits"] img[src$="nav_hits_active_teal.gif"] {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 0;
+  padding-left: 100%;
+  z-index: -1;
+  border-radius: 12px 12px 0 0;
+  border-width: 1px 1px 0 1px;
+  box-sizing: border-box;
+  /* tab-background-color-active */
+  background-color: #a6cdde;
+  /* tab-border-color-active */
+  border-color: #5d9fc0;
+}
+/* line 390, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"] {
+  position: relative;
+  display: block;
+  width: auto;
+  min-width: 89px;
+  height: 32px;
+  margin: 0 2px 0 2px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 36px;
+  /* tab-text-color */
+  color: black;
+  white-space: nowrap;
+}
+/* line 393, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"]::after {
+  content: "Qualifications";
+}
+/* line 397, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"] img {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 0;
+  padding-left: 100%;
+  z-index: -1;
+  border-radius: 12px 12px 0 0;
+  border-width: 1px 1px 0 1px;
+  box-sizing: border-box;
+  /* tab-background-color-inactive */
+  background-color: #e1e0c0;
+  /* tab-border-color-inactive */
+  border: #c4c493 1px solid;
+}
+/* line 401, ../scss/style.scss */
+td[width="60%"] td[rowspan="2"] a[href^="/mturk/findquals"] img[src$="nav_quals_active.gif"] {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 0;
+  padding-left: 100%;
+  z-index: -1;
+  border-radius: 12px 12px 0 0;
+  border-width: 1px 1px 0 1px;
+  box-sizing: border-box;
+  /* tab-background-color-active */
+  background-color: #a6cdde;
+  /* tab-border-color-active */
+  border-color: #5d9fc0;
+}
+
+/* HITs Available */
+/* line 410, ../scss/style.scss */
+td[width="20%"] span {
+  font-size: 0 !important;
+  line-height: 0;
+  display: block;
+  height: 32px;
+  width: auto !important;
+  padding: 0 12px 0 12px;
+  /* tab-background-color-inactive */
+  background-color: #e1e0c0;
+  border-radius: 12px 12px 0 0;
+  /* tab-border-color-inactive */
+  border: #c4c493 1px solid;
+  border-width: 1px 1px 0 1px;
+  box-sizing: border-box;
+}
+/* line 428, ../scss/style.scss */
+td[width="20%"] span b {
+  /* tab-text-color */
+  color: black !important;
+  font-size: 11px;
+  line-height: 32px;
+}
+
+/******************************************************************************
+	This is styling the block with the search bar and other features.
+*******************************************************************************/
+/* line 439, ../scss/style.scss */
+#subtabs_and_searchbar {
+  background-image: none !important;
+  /* page-header-background-color */
+  background-color: #a6cdde;
+  /* page-header-border-color */
+  border-top: #a3a3a3 1px solid !important;
+  padding-left: 12px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  height: 64px;
+}
+/* line 458, ../scss/style.scss */
+#subtabs_and_searchbar #searchbar select, #subtabs_and_searchbar input {
+  /* default-text-color */
+  color: black;
+}
+
+/* Gah! I hate static selectors like this but I can't think of anything else! */
+/* Replaces the static input button with a custon one */
+/* line 466, ../scss/style.scss */
+#searchbar_form > div:nth-child(4) {
+  position: relative;
+}
+/* line 469, ../scss/style.scss */
+#searchbar_form > div:nth-child(4) #search_go_button {
+  display: block;
+  width: 0;
+  height: 0;
+  padding: 0 0 21px 21px !important;
+  /* search-go-button-background-color */
+  background: #e1e0c0 !important;
+  border-radius: 21px;
+  /* search-go-button-border-color */
+  border: #c4c493 1px solid;
+  box-sizing: border-box;
+}
+/* line 484, ../scss/style.scss */
+#searchbar_form > div:nth-child(4)::after {
+  content: "GO";
+  /* search-go-button-text-color */
+  color: black;
+  font-size: 8px;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 23px;
+  pointer-events: none;
+  background: none;
+}
+
+/*****************************************************************************
+	Here we are styling the tables on the front page.
+	Amazon has decided to use tables inside tables inside tables so styling
+	this is tricky.
+*****************************************************************************/
+/* Top table with Name and Turker ID */
+/* line 509, ../scss/style.scss */
+table[width="760"] {
+  width: 960px;
+  padding: 5px;
+}
+
+/* Table wrapper */
+/* line 515, ../scss/style.scss */
+table[width="760"][cellspacing="0"] {
+  width: 960px;
+  /* table-body-background-color */
+  background-color: #f0f6f9;
+  border-spacing: 0;
+  /* margin-bottom: 15px; */
+  padding: 0;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  /* Remove spacing beside header text */
+  /* Table header */
+  /* Inner table container */
+  /* Generic table */
+}
+/* line 528, ../scss/style.scss */
+table[width="760"][cellspacing="0"] td[bgcolor="#7fb4cf"][width="10"] {
+  display: none;
+}
+/* line 533, ../scss/style.scss */
+table[width="760"][cellspacing="0"] td[bgcolor="#7fb4cf"][width="100%"] {
+  /* table-header-background-color */
+  background-color: #7fb4cf;
+  padding-left: 15px;
+  /* table-header-text-color */
+  color: white !important;
+}
+/* line 542, ../scss/style.scss */
+table[width="760"][cellspacing="0"] .container-content {
+  /* table-body-background-color */
+  background-color: #f0f6f9;
+  background-image: none;
+  border: none;
+  /* table-body-border-color */
+  border: #cccccc 1px solid;
+  border-width: 0 1px 1px 1px;
+}
+/* line 554, ../scss/style.scss */
+table[width="760"][cellspacing="0"] .metrics-table {
+  /*
+  border-spacing: 0;
+  border-collapse: collapse;
+  */
+  /* 50/50 tables have to have no padding */
+  /* Divide 50/50 tables */
+  /* Divide 50/50 tables */
+  /* Change link color */
+}
+/* line 560, ../scss/style.scss */
+table[width="760"][cellspacing="0"] .metrics-table td {
+  /*
+  padding: 5px;
+  */
+  /* table-list-text-color */
+  color: black;
+}
+/* line 569, ../scss/style.scss */
+table[width="760"][cellspacing="0"] .metrics-table td[width="50%"] {
+  /*
+  padding: 0;
+  */
+}
+/* line 576, ../scss/style.scss */
+table[width="760"][cellspacing="0"] .metrics-table td[width="50%"]:first-child {
+  /*
+  padding-right: 1px;
+  */
+}
+/* line 583, ../scss/style.scss */
+table[width="760"][cellspacing="0"] .metrics-table td[width="50%"]:last-child {
+  /*
+  padding-left: 1px;
+  */
+}
+/* line 589, ../scss/style.scss */
+table[width="760"][cellspacing="0"] .metrics-table tr.metrics-table-header-row {
+  /* table-list-header-background-color */
+  background-color: #cccccc;
+  border: none;
+  /* table-list-header-text-color */
+  color: #336699;
+}
+/* line 597, ../scss/style.scss */
+table[width="760"][cellspacing="0"] .metrics-table tr.even {
+  /* table-list-row-even-background-color */
+  background-color: white;
+  /* table-list-row-border-color */
+  border-top: transparent solid 2px;
+}
+/* line 604, ../scss/style.scss */
+table[width="760"][cellspacing="0"] .metrics-table tr.odd {
+  /* table-list-row-odd-background-color */
+  background-color: #f1f3eb;
+  /* table-list-row-border-color */
+  border-top: transparent solid 2px;
+}
+/* line 612, ../scss/style.scss */
+table[width="760"][cellspacing="0"] .metrics-table td a {
+  /* table-link-color */
+  color: blue;
+}
+
+/* All tables after the first need to not have a border-radius */
+/* line 620, ../scss/style.scss */
+table[width="760"][cellspacing="0"] ~ table[width="760"][cellspacing="0"] {
+  border-radius: 0;
+}
+
+/* This is the Table for HitDB. We're going to make it match the theme. */
+/* line 625, ../scss/style.scss */
+table[width="700"][cellspacing="0px"] {
+  width: 960px;
+}
+/* line 628, ../scss/style.scss */
+table[width="700"][cellspacing="0px"] .white_text_14_bold {
+  /* table-header-background-color */
+  background-color: #7fb4cf !important;
+  padding-left: 15px !important;
+  /* table-header-text-color */
+  color: white !important;
+}
+/* line 636, ../scss/style.scss */
+table[width="700"][cellspacing="0px"] .container-content {
+  /* table-body-background-color */
+  background-color: #f0f6f9;
+  background-image: none;
+  border: none;
+  /* table-body-border-color */
+  border: 1px #cccccc solid;
+  border-width: 0 1px 1px 1px;
+}
+
+/*****************************************************************************
+	Here we're styling the HITs page.
+	The borders are shared between qualified and unqualified so we can only
+	select all of them. This means we can't simply change their color and be
+	done with it.
+
+	We are going to have to set the table-style to fixed and then reconstruct
+	the table, making sure the border cells are not displayed.
+*****************************************************************************/
+/* Sort by tools wrapper */
+/* line 661, ../scss/style.scss */
+#sortresults_form {
+  position: relative;
+  /* Go button */
+  /* Removing the image and adding effects */
+  /* Adding text to the GO! button */
+}
+/* line 667, ../scss/style.scss */
+#sortresults_form input[src$="go-button-gateway.gif"] {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  padding: 20px 20px 0 0;
+  background-color: #cc6633;
+  /* Needs variable! */
+  border-radius: 21px;
+  border: #f1b158 1px solid !important;
+  /* Needs variable! */
+}
+/* line 681, ../scss/style.scss */
+#sortresults_form::after {
+  content: "GO!";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 3px;
+  line-height: 21px;
+  font-size: 9px;
+  /* sort-button-text-color */
+  color: white;
+  pointer-events: none;
+  background: none;
+  box-sizing: border-box;
+}
+
+/* The wrapper for all HIT tables */
+/* line 701, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] {
+  /* A generic HIT table */
+}
+/* line 704, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] {
+  /* Make it so we have control over cell widths */
+  table-layout: fixed;
+  overflow: hidden;
+  margin-bottom: 5px;
+  /* hit-border-color */
+  border: #336699 1px solid;
+  border-radius: 12px;
+  /* Get rid of the top & bottom borders */
+  /* Get rid of the header spacers */
+  /* Get rid of the corner images */
+  /* Header title */
+  /* Header view hit link section */
+  /* Unqualified HIT header */
+  /* Unqualified HIT body */
+  /* Qualified HIT header */
+  /* Qualified HIT body */
+}
+/* line 715, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[bgcolor="#336699"][height="1"] {
+  height: 0;
+}
+/* line 720, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[colspan="2"][valign="bottom"] {
+  width: 0;
+}
+/* line 726, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] img[src$="corner.gif"],
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] img[src$="corner_grey.gif"] {
+  display: none;
+}
+/* line 731, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[valign="middle"][align="left"] {
+  padding-left: 6px;
+}
+/* line 736, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[valign="middle"][align="right"] {
+  padding-right: 8px;
+}
+/* line 741, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[bgcolor="#CCCCCC"] {
+  /* hit-header-unqualified-background-color */
+  background-color: #cccccc;
+  height: 22px;
+}
+/* line 748, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[bgcolor="#F1F3EB"] {
+  /* hit-body-unqualified-background-color */
+  background-color: #f1f3eb;
+  padding: 8px;
+}
+/* line 755, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[bgcolor="#CCDDE9"] {
+  /* hit-header-qualified-background-color */
+  background-color: #ccdde9;
+  height: 22px;
+}
+/* line 762, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] td[bgcolor="#FOF6F9"] {
+  /* hit-body-qualified-background-color */
+  background-color: #f0f6f9;
+  padding: 8px;
+}
+/* line 777, ../scss/style.scss */
+table[width="100%"][cellspacing="5"] table[width="100%"][height="100%"] table[cellspacing="5"] {
+  border-spacing: 0;
+}
+
+/*****************************************
+	Individual HIT page
+*****************************************/
+/* Pileline Header */
+/* Yes, I selected this thing based on its style attribute. */
+/* line 791, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"],
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] {
+  /* Accept button wrapper */
+  /* Second button wrapper */
+  /* Greyed out submit button */
+  /* Support for my "Return & Accept" script */
+}
+/* line 794, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] td[height="26"],
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] {
+  /* Accept button */
+}
+/* line 796, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] td[height="26"] div[name="cookieDependentFunctionality"],
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] div[name="cookieDependentFunctionality"] {
+  position: relative;
+  width: 82px;
+  height: 24px;
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+  /* Accept button text */
+}
+/* line 799, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] td[height="26"] div[name="cookieDependentFunctionality"] input,
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] div[name="cookieDependentFunctionality"] input {
+  width: 0;
+  height: 24px;
+  padding: 0 84px 0 0;
+  box-sizing: border-box;
+  display: inline-block;
+  /* button-background-color */
+  background-color: #ffc436;
+  /* button-border-color */
+  border: #000066 1px solid;
+  border-radius: 6px;
+}
+/* line 804, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] td[height="26"] div[name="cookieDependentFunctionality"]::after,
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] div[name="cookieDependentFunctionality"]::after {
+  content: "Accept";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 23px;
+  font-size: 10px;
+  /* button-text-color */
+  color: #000066;
+  pointer-events: none;
+  background: none;
+  text-align: center;
+}
+/* line 812, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"],
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] {
+  /* Button image wrapper */
+}
+/* line 814, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"],
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"] {
+  position: relative;
+  width: 82px;
+  height: 24px;
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+  /* Button */
+  /* Skip button text */
+}
+/* line 818, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"] img,
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"] img {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  padding: 0 84px 0 0;
+  height: 24px;
+  z-index: -1;
+  box-sizing: border-box;
+  display: inline-block;
+  /* button-background-color */
+  background-color: #ffc436;
+  /* button-border-color */
+  border: #000066 1px solid;
+  border-radius: 6px;
+}
+/* line 823, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"]::after,
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/"]::after {
+  content: "Skip HIT";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 23px;
+  font-size: 10px;
+  /* button-text-color */
+  color: #000066;
+  pointer-events: none;
+  background: none;
+  text-align: center;
+}
+/* line 828, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/return"],
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/return"] {
+  /* Return HIT button text */
+}
+/* line 830, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/return"]::after,
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] td[height="26"] + td + td[height="26"] a[href^="/mturk/return"]::after {
+  content: "Return HIT";
+}
+/* line 837, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] a[id^="pipeline.submit.iframes.tooltip"],
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] a[id^="pipeline.submit.iframes.tooltip"] {
+  position: relative;
+  width: 82px;
+  height: 24px;
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+  opacity: 0.6;
+  /* Button */
+  /* Skip button text */
+}
+/* line 842, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] a[id^="pipeline.submit.iframes.tooltip"] img,
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] a[id^="pipeline.submit.iframes.tooltip"] img {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  padding: 0 84px 0 0;
+  height: 24px;
+  z-index: -1;
+  box-sizing: border-box;
+  display: inline-block;
+  /* button-background-color */
+  background-color: #ffc436;
+  /* button-border-color */
+  border: #000066 1px solid;
+  border-radius: 6px;
+}
+/* line 847, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] a[id^="pipeline.submit.iframes.tooltip"]::after,
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] a[id^="pipeline.submit.iframes.tooltip"]::after {
+  content: "Submit HIT";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 23px;
+  font-size: 10px;
+  /* button-text-color */
+  color: #000066;
+  pointer-events: none;
+  background: none;
+  text-align: center;
+}
+/* line 853, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] #returnAccept,
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] #returnAccept {
+  position: relative;
+  width: 82px;
+  height: 24px;
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* Button */
+  /* Skip button text */
+}
+/* line 859, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] #returnAccept img,
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] #returnAccept img {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  padding: 0 84px 0 0;
+  height: 24px;
+  z-index: -1;
+  box-sizing: border-box;
+  display: inline-block;
+  /* button-background-color */
+  background-color: #ffc436;
+  /* button-border-color */
+  border: #000066 1px solid;
+  border-radius: 6px;
+}
+/* line 864, ../scss/style.scss */
+table[style="padding-top: 0px; border: 0;"] #returnAccept::after,
+div[style="margin-left: 100px; margin-right: 100px; margin-bottom: 10px;"] #returnAccept::after {
+  content: "R&A HIT";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 23px;
+  font-size: 10px;
+  /* button-text-color */
+  color: #000066;
+  pointer-events: none;
+  background: none;
+  text-align: center;
+}
+
+/* HIT information caspule */
+/* This also applies to the box on the qualification pages */
+/* line 872, ../scss/style.scss */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] {
+  width: auto !important;
+  margin: 5px 20px !important;
+  /* HIT information caspule */
+}
+/* line 877, ../scss/style.scss */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] {
+  /* Make it so we have control over cell widths */
+  table-layout: fixed;
+  overflow: hidden;
+  /* hit-border-color */
+  border: #336699 1px solid;
+  border-radius: 12px;
+  width: 100% !important;
+  margin: 0 !important;
+  /* Get rid of the top & bottom borders */
+  /* Get rid of the side borders */
+  /* Get rid of the header spacers */
+  /* Get rid of the corner images */
+  /* Header title */
+  /* Qualified HIT header */
+  /* Qualified HIT body */
+}
+/* line 890, ../scss/style.scss */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[bgcolor="#336699"][height="1"] {
+  height: 0;
+  background-color: transparent;
+}
+/* line 896, ../scss/style.scss */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[bgcolor="#336699"][width="8"] {
+  width: 0;
+  background-color: transparent;
+}
+/* line 903, ../scss/style.scss */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[colspan="2"] {
+  width: 0;
+}
+/* line 909, ../scss/style.scss */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] img[src$="corner.gif"],
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] img[src$="corner_grey.gif"] {
+  display: none;
+}
+/* line 914, ../scss/style.scss */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[valign="middle"][align="left"] {
+  margin: 0;
+  padding-left: 6px;
+}
+/* line 920, ../scss/style.scss */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[bgcolor="#CCDDE9"] {
+  /* hit-header-qualified-background-color */
+  background-color: #ccdde9;
+  height: 22px;
+}
+/* line 927, ../scss/style.scss */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] td[bgcolor="#F0F6F9"] {
+  /* hit-body-qualified-background-color */
+  background-color: #f0f6f9;
+  padding: 8px;
+}
+/* line 942, ../scss/style.scss */
+div[style$="margin-top: 5px; margin-left: 10px; margin-right: 10px; margin-bottom: 5px;"] table[style="width: auto; margin-left: 10px; margin-right: 10px;"] table[cellspacing="5"] {
+  border-spacing: 0;
+}
+
+/*****************************************
+	Individual qualification page
+******************************************/
+/* line 952, ../scss/style.scss */
+td[valign="bottom"][height="26"] {
+  /* Continue button wrapper */
+  /* Cancel button wrapper */
+}
+/* line 954, ../scss/style.scss */
+td[valign="bottom"][height="26"] form[name="qualificationForm"] {
+  position: relative;
+  width: 82px;
+  height: 24px;
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+  /* Continue button */
+}
+/* line 957, ../scss/style.scss */
+td[valign="bottom"][height="26"] form[name="qualificationForm"] input[name="submit"] {
+  width: 0;
+  height: 24px;
+  padding: 0 84px 0 0;
+  box-sizing: border-box;
+  display: inline-block;
+  /* button-background-color */
+  background-color: #ffc436;
+  /* button-border-color */
+  border: #000066 1px solid;
+  border-radius: 6px;
+}
+/* line 961, ../scss/style.scss */
+td[valign="bottom"][height="26"] form[name="qualificationForm"]::after {
+  content: "Continue";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 23px;
+  font-size: 10px;
+  /* button-text-color */
+  color: #000066;
+  pointer-events: none;
+  background: none;
+  text-align: center;
+}
+/* line 967, ../scss/style.scss */
+td[valign="bottom"][height="26"] a[href^="/mturk/findquals"] {
+  position: relative;
+  width: 82px;
+  height: 24px;
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+  /* Continue button */
+}
+/* line 970, ../scss/style.scss */
+td[valign="bottom"][height="26"] a[href^="/mturk/findquals"] img {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  padding: 0 84px 0 0;
+  height: 24px;
+  z-index: -1;
+  box-sizing: border-box;
+  display: inline-block;
+  /* button-background-color */
+  background-color: #ffc436;
+  /* button-border-color */
+  border: #000066 1px solid;
+  border-radius: 6px;
+}
+/* line 974, ../scss/style.scss */
+td[valign="bottom"][height="26"] a[href^="/mturk/findquals"]::after {
+  content: "Cancel";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 23px;
+  font-size: 10px;
+  /* button-text-color */
+  color: #000066;
+  pointer-events: none;
+  background: none;
+  text-align: center;
+}
+
+/*****************************************
+	Footer
+******************************************/
+/* line 983, ../scss/style.scss */
+.footer_separator {
+  /* page-footer-background-color */
+  background-color: #eeeecc !important;
+}
+
+/*****************************************
+	JavaScript plugin UI
+******************************************/
+/* line 993, ../scss/style.scss */
+#mturktheme {
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  position: fixed;
+  top: 0;
+  right: -270px;
+  height: 100%;
+  width: 270px;
+  font-size: 8pt;
+  transition: right 0.5s ease;
+  overflow-y: scroll;
+  padding: 3px 3px 0;
+  color: black;
+  border-left: 2px #dadada solid;
+  padding-bottom: 100px;
+}
+/* line 1011, ../scss/style.scss */
+#mturktheme.active {
+  right: 0;
+  transition: right 0.5s ease;
+}
+/* line 1016, ../scss/style.scss */
+#mturktheme .toolbar {
+  box-sizing: border-box;
+  height: 31px;
+  width: 100%;
+  padding: 5px 5px 5px 8px;
+  text-align: center;
+  color: #585858;
+  line-height: calc(31px - 10px);
+}
+/* line 1026, ../scss/style.scss */
+#mturktheme .toolbar:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* line 1032, ../scss/style.scss */
+#mturktheme .toolbar .icon {
+  margin-top: 2px;
+}
+/* line 1035, ../scss/style.scss */
+#mturktheme .toolbar .icon.add, #mturktheme .toolbar .icon.import {
+  float: left;
+  margin-right: 5px;
+}
+/* line 1040, ../scss/style.scss */
+#mturktheme .toolbar .icon.export {
+  float: left;
+  margin-right: 5px;
+}
+/* line 1045, ../scss/style.scss */
+#mturktheme .toolbar .icon.revert {
+  float: right;
+  margin-right: 5px;
+}
+/* line 1050, ../scss/style.scss */
+#mturktheme .toolbar .icon.save {
+  float: right;
+  margin-right: 5px;
+}
+/* line 1055, ../scss/style.scss */
+#mturktheme .toolbar .icon.close {
+  float: right;
+}
+/* line 1060, ../scss/style.scss */
+#mturktheme .toolbar select {
+  float: left;
+  margin-right: 5px;
+  max-width: 90px;
+}
+/* line 1068, ../scss/style.scss */
+#mturktheme .variable-group-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+/* line 1074, ../scss/style.scss */
+#mturktheme .variable-group-wrapper .variable-group, #mturktheme .variable-group-wrapper .variable-color {
+  box-sizing: border-box;
+  width: 100%;
+  height: 37px;
+  background-color: #fff;
+  position: relative;
+  margin: 3px 3px 0;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+/* line 1088, ../scss/style.scss */
+#mturktheme .variable-group-wrapper .variable-group .color, #mturktheme .variable-group-wrapper .variable-color .color {
+  box-sizing: border-box;
+  width: 25px;
+  height: calc(100% - 6px);
+  border: #eaeaea 1px solid;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  margin: 3px;
+}
+/* line 1106, ../scss/style.scss */
+#mturktheme .variable-group-wrapper .variable-group .expand, #mturktheme .variable-group-wrapper .variable-color .expand {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  width: 25px;
+  height: 100%;
+  cursor: pointer;
+  background-color: #eaeaea;
+}
+/* line 1121, ../scss/style.scss */
+#mturktheme .variable-group-wrapper .variable-group .expand::after, #mturktheme .variable-group-wrapper .variable-color .expand::after {
+  content: "^";
+  color: #fff;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  -ms-transform: rotateZ(180deg);
+  /* IE 9 */
+  -webkit-transform: rotateZ(180deg);
+  /* Chrome, Safari, Opera */
+  transform: rotateZ(180deg);
+  margin-left: -1px;
+}
+/* line 1139, ../scss/style.scss */
+#mturktheme .variable-group-wrapper .variable-group .content, #mturktheme .variable-group-wrapper .variable-color .content {
+  width: 100%;
+  height: 100%;
+  padding: 6px 30px;
+}
+/* line 1147, ../scss/style.scss */
+#mturktheme .variable-group-wrapper .variable-color {
+  margin-left: 15px;
+  display: none;
+}
+/* line 1153, ../scss/style.scss */
+#mturktheme .variable-group-wrapper.active .variable-color {
+  display: block;
+}
+/* line 1157, ../scss/style.scss */
+#mturktheme .variable-group-wrapper.active .expand::after {
+  -ms-transform: rotateZ(0deg);
+  /* IE 9 */
+  -webkit-transform: rotateZ(0deg);
+  /* Chrome, Safari, Opera */
+  transform: rotateZ(0deg);
+  margin-top: 12px;
+}
+
+/* line 1168, ../scss/style.scss */
+#mturkthemeoptions {
+  /* header-link-color */
+  color: #4d4d4d;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* line 1175, ../scss/style.scss */
+#mturkthemeoptions:hover {
+  text-decoration: underline;
+}
+
+/* line 1182, ../scss/style.scss */
+.icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  vertical-align: middle;
+  margin-top: -3px;
+  cursor: pointer;
+}
+/* line 1194, ../scss/style.scss */
+.icon.add {
+  background-image: url("https://i.imgur.com/oYUnOEh.png");
+}
+/* line 1198, ../scss/style.scss */
+.icon.export {
+  background-image: url("https://i.imgur.com/Q6euAOY.png");
+}
+/* line 1202, ../scss/style.scss */
+.icon.import {
+  background-image: url("https://i.imgur.com/Ccu8BIZ.png");
+}
+/* line 1206, ../scss/style.scss */
+.icon.revert {
+  background-image: url("https://i.imgur.com/RPFdovU.png");
+}
+/* line 1210, ../scss/style.scss */
+.icon.save {
+  background-image: url("https://i.imgur.com/WT0IJmS.png");
+}
+/* line 1214, ../scss/style.scss */
+.icon.close {
+  background-image: url("https://i.imgur.com/VnBQo4H.png");
+}
+/* line 1218, ../scss/style.scss */
+.icon:hover {
+  background-size: 18px 18px;
+}
