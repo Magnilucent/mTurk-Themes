@@ -436,8 +436,10 @@ function replaceProperty(regex, str, value) {
 // Finds the index of a property in variables
 function getPropertyIndex (variableName) {
     for (var i in variables) {
-        if (variableName == variables[i][0]) {
-            return i;
+        if (variables[i] != null) {
+            if (variableName == variables[i][0]) {
+                return i;
+            }
         }
     }
 
