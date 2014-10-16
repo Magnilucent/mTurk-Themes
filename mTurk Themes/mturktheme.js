@@ -1,20 +1,20 @@
 // ==UserScript==
-// @name       		mTurkThemes
-// @namespace  		http://ericfraze.com
-// @version    		1.2
-// @description  	This script provides a UI that allows you to make and share themes for mTurk.com
-// @match      		https://www.mturk.com/*
-// @resource 		cssfile https://magnilucent.github.io/mTurk-Themes/css/style.css?version=71234123
-// @resource 		colpickcssfile https://magnilucent.github.io/mTurk-Themes/css/colpick.css?version=17
+// @name			mTurkThemes
+// @namespace		http://ericfraze.com
+// @version			1.2
+// @description		This script provides a UI that allows you to make and share themes for mTurk.com
+// @match			https://www.mturk.com/*
+// @resource		cssfile https://magnilucent.github.io/mTurk-Themes/css/style.css?version=71234123
+// @resource		colpickcssfile https://magnilucent.github.io/mTurk-Themes/css/colpick.css?version=17
 // @grant			GM_addStyle
 // @grant			GM_getResourceText
 // @grant			GM_setClipboard
 // @grant			GM_getValue
 // @grant			GM_setValue
 // @grant			GM_deleteValue
-// @copyright  		2014+, Eric Fraze
-// @require     	http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
-// @require 		https://greasyfork.org/scripts/1562-colpick-color-picker/code/colpick%20Color%20Picker.js?version=3858
+// @copyright		2014+, Eric Fraze
+// @require			http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+// @require			https://greasyfork.org/scripts/1562-colpick-color-picker/code/colpick%20Color%20Picker.js?version=3858
 // ==/UserScript==
 
 // Add color picker CSS
