@@ -4,8 +4,8 @@
 // @version    1.1
 // @description  This script inserts custom CSS for mturk.com
 // @match      https://www.mturk.com/*
-// @resource cssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/style.css?version=71234123
-// @resource colpickcssfile https://dl.dropboxusercontent.com/u/8371875/mTurk-Themes/mTurk%20Themes/css/colpick.css?version=17
+// @resource cssfile https://magnilucent.github.io/mTurk-Themes/css/style.css?version=71234123
+// @resource colpickcssfile https://magnilucent.github.io/mTurk-Themes/css/colpick.css?version=17
 // @grant           GM_addStyle
 // @grant           GM_getResourceText
 // @grant           GM_setClipboard
