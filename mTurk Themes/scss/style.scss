@@ -188,20 +188,23 @@ a:visited {
 	height: 24px;
 	display: block;
 	margin-bottom: 5px;
+	text-decoration: none;
 }
 
 @mixin button-background($element-type: "input") {
 	@if ($element-type == "input") {
 		width: 0;
-		height: 0;
-		padding: 22px 82px 0 0;
+		height: 24px;
+		padding: 0 84px 0 0;
+		box-sizing: border-box;
 	} @else {
 		content: "";
 		position: absolute;
 		left: 0;
 		top: 0;
-		width: 100%;
-		height: 100%;
+		width: 0;
+		padding: 0 84px 0 0;
+		height: 24px;
 		z-index: -1;
 		box-sizing: border-box;
 	}
